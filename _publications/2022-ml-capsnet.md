@@ -6,8 +6,8 @@ permalink: /publication/2022-Capsule-Network
 excerpt: 'This paper is about the multi-label image classification using a capsule network.'
 date: 2022-01-01
 venue: 'Structural, Syntactic, and Statistical Pattern Recognition'
-# slidesurl: 'http://academicpages.github.io/files/slides1.pdf'
-paperurl: 'http://academicpages.github.io/files/ml-capsnet.pdf'
+# slidesurl: 'http://ktnoor.github.io/files/slides1.pdf'
+paperurl: 'http://ktnoor.github.io/files/ml-capsnet.pdf'
 citation: '<i>K. T. Noor, A. Robles-Kelly, and B. Kusy, ‘A Capsule Network for Hierarchical Multi-label Image Classification’, in Structural, Syntactic, and Statistical Pattern Recognition, A. Krzyzak, C. Y. Suen, A. Torsello, and N. Nobile, Eds., in Lecture Notes in Computer Science. Cham: Springer International Publishing, 2022, pp. 163–172. doi: 10.1007/978-3-031-23028-8_17.</i>'
 ---
 
