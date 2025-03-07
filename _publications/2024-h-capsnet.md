@@ -6,8 +6,8 @@ permalink: /publication/2024-h-Capsnet
 excerpt: 'This paper is about the hierarchical multi-label image classification using a capsule network.'
 date: 2024-03-01
 venue: 'Pattern Recognition'
-# slidesurl: 'http://academicpages.github.io/files/slides1.pdf'
-paperurl: 'http://academicpages.github.io/files/h-capsnet.pdf'
+# slidesurl: 'http://ktnoor.github.io/files/slides1.pdf'
+paperurl: 'http://ktnoor.github.io/files/h-capsnet.pdf'
 citation: '<i>K. T. Noor and A. Robles-Kelly, ‘H-CapsNet: A capsule network for hierarchical image classification’, Pattern Recognition, vol. 147, p. 110135, Mar. 2024, doi: 10.1016/j.patcog.2023.110135.</i>'
 ---
 
