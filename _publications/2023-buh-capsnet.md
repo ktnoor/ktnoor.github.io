@@ -6,8 +6,8 @@ permalink: /publication/2023-buhcapsnet
 excerpt: 'This paper is about the hierarchical image classification using a bottom-up strategy.'
 date: 2023-11-01
 venue: '2023 International Conference on Digital Image Computing: Techniques and Applications (DICTA)'
-# slidesurl: 'http://academicpages.github.io/files/slides1.pdf'
-paperurl: 'http://academicpages.github.io/files/buh-capsnet.pdf'
+# slidesurl: 'http://ktnoor.github.io/files/slides1.pdf'
+paperurl: 'http://ktnoor.github.io/files/buh-capsnet.pdf'
 citation: '<i>K. T. Noor, A. Robles-Kelly, L. Y. Zhang, and M. R. Bouadjenek, ‘A Bottom-Up Capsule Network for Hierarchical Image Classification’, in 2023 International Conference on Digital Image Computing: Techniques and Applications (DICTA), Nov. 2023, pp. 325–331. doi: 10.1109/DICTA60407.2023.00052.</i>'
 ---
 
