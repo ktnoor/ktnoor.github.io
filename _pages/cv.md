@@ -1,6 +1,6 @@
 ---
 layout: archive
-title: "Curriculum Vitae of Khondaker Tasrif Noor"
+title: "Curriculum Vitae: <em>Khondaker Tasrif Noor</em>"
 permalink: /cv/
 author_profile: true
 redirect_from:
@@ -19,7 +19,7 @@ redirect_from:
 
 Profile
 ======
-A highly competent researcher with a strong focus on deep learning, experienced in designing, implementing, and testing advanced AI models and systems. Working in a close team environment, I have developed strong communication and project planning skills. Currently pursuing a PhD with a focus on innovative neural network methodologies, I seek a role that will expand my research, technical, and design expertise within the broader sphere of artificial intelligence.
+A highly competent researcher with a strong focus on deep learning, specifically experienced in neural network architecture design, algorithm implementation, and advanced AI model and system testing. I have strong communication and project planning skills within collaborative team environments. My PhD research focuses on innovative neural network methodologies, and I am pursuing a career to leverage my research, technical, and design expertise within artificial intelligence systems to unlock new possibilities in the field.
 
 Education
 ======
@@ -101,5 +101,5 @@ Additional Information
     - Specialisation in Programming the IOT (UCI, 2020).
     - PCB Designing (Udemy, 2020).
 
-- **Peer Reviewer:** Reviewed papers for conferences such as KSEM, AICCSA, ECAI, PAKDD and journals such as Pattern Recognition, Information fusion, Neurocomputing, Neural computing and applications, and MethodsX.
+- **Peer Reviewer:** Reviewed papers for conferences such as KSEM, AICCSA, ECAI, PAKDD and journals such as Pattern Recognition, Information fusion, Neurocomputing, Neural computing and applications, and MethodsX. The updated list of my peer reviews can be found [here](https://orcid.org/0000-0002-4259-9539#:~:text=Peer%20review%20(16%20reviews%C2%A0for%207%20publications/grants)).
 
