@@ -13,7 +13,7 @@ redirect_from:
 
 <p align="center">
   <a href="/files/KTNoor_CV.pdf" style="color: red; font-size: 1.5em; font-weight: bold;">
-    Download CV in PDF format
+    Download my CV as PDF
   </a>
 </p>
 
