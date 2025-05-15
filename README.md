@@ -87,3 +87,15 @@ Unfortunately, one logistical issue with a template theme like Academic Pages th
 [![GitHub stars](https://img.shields.io/github/stars/academicpages/academicpages.github.io)](https://github.com/academicpages/academicpages.github.io)
 [![GitHub forks](https://img.shields.io/github/forks/academicpages/academicpages.github.io)](https://github.com/academicpages/academicpages.github.io/fork)
 </div>
+
+---
+
+## Running locally with WSL
+
+If you are using Windows and want to run the website locally, you can use [Windows Subsystem for Linux](https://learn.microsoft.com/en-us/windows/wsl/install) (WSL).
+
+After installing and setting up WSL, you can run the following commands in your WSL terminal:
+```bash
+bundle exec jekyll serve
+```
+

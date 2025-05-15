@@ -9,6 +9,14 @@ redirect_from:
 
 {% include base_path %}
 
+<!-- [Khondaker Tasrif Noor](http://ktnoor.github.io/files/KTNoor_CV.pdf "Khondaker Tasrif Noor") -->
+
+<p align="center">
+  <a href="/files/KTNoor_CV.pdf" style="color: red; font-size: 1.5em; font-weight: bold;">
+    Download CV in PDF format
+  </a>
+</p>
+
 Profile
 ======
 A highly competent researcher with a strong focus on deep learning, experienced in designing, implementing, and testing advanced AI models and systems. Working in a close team environment, I have developed strong communication and project planning skills. Currently pursuing a PhD with a focus on innovative neural network methodologies, I seek a role that will expand my research, technical, and design expertise within the broader sphere of artificial intelligence.

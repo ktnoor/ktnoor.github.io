@@ -1,5 +1,5 @@
 ---
-title: "Casual Academic Staff"
+title: "Sessional Academic Staff"
 collection: experience
 type: "Undergraduate and postgraduate units"
 permalink: /experience/2022-Casual-Academic
