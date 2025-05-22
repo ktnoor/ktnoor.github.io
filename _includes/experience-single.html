@@ -1,0 +1,15 @@
+{% if post.title %}
+  <li>
+    {% if post.permalink %}
+      <strong><a href="{{ post.permalink }}">{{ post.title }}</a></strong>
+    {% else %}
+      <strong><a href="{{ post.url }}">{{ post.title }}</a></strong>
+    {% endif %}
+    {% if post.type %}<br>{{ post.type }}{% endif %}
+    {% if post.venue %} at {{ post.venue }}{% endif %}
+    {% if post.date %}<br><em>{{ post.date | date: "%B %Y" }}</em>{% endif %}
+    {% if post.description %}
+      <br>{{ post.description }}
+    {% endif %}
+  </li>
+{% endif %}

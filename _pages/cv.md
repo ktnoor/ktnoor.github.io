@@ -29,9 +29,11 @@ Education
 
 Work experience
 ======
-  <ul>{% for post in site.experience reversed %}
-    {% include archive-single-cv.html %}
-  {% endfor %}</ul>
+  <ul>
+    {% for post in site.experience reversed %}
+      {% include experience-single.html %}
+    {% endfor %}
+  </ul>
 
 Research and Publications
 ======
