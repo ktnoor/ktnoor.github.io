@@ -25,12 +25,11 @@ layout: default
 
 <div id="main" role="main">
   <div class="page__inner-wrap">
-    <div class="page__content" itemprop="text">
+    <div class="about-flex-container">
       <!-- Author Profile Section -->
       <div class="author-profile-section">
         {% include author-profile.html %}
       </div>
-      
       <!-- About Content -->
       <div class="about-content-section">
         {{ content }}
@@ -119,23 +118,35 @@ layout: default
   }
 }
 
-.author-profile-section {
-  margin-top: 2rem;
-  margin-bottom: 3rem;
-  padding: 2rem;
-  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
-  border-radius: 15px;
-  box-shadow: 0 8px 32px rgba(0,0,0,0.1);
-  border: 1px solid rgba(255,255,255,0.2);
-  backdrop-filter: blur(10px);
+.about-flex-container {
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+  align-items: flex-start;
+  justify-content: center;
 }
-
+.author-profile-section {
+  flex: 0 0 320px;
+  max-width: 340px;
+  min-width: 220px;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding: 1.5rem 1rem;
+}
 .about-content-section {
-  margin-top: 2rem;
-  padding: 2rem;
-  background: white;
-  border-radius: 15px;
-  box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+  flex: 1 1 0;
+  margin-top: 0;
+  padding: 1.5rem 1rem;
+}
+@media (max-width: 900px) {
+  .about-flex-container {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  .author-profile-section, .about-content-section {
+    max-width: 100%;
+    padding: 1rem 0.5rem;
+  }
 }
 
 /* Responsive design */
