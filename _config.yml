@@ -9,7 +9,7 @@
 # Basic Site Settings
 locale                   : "en-AU"
 site_theme               : "default"
-title                    : "Profile of Khondaker Tasrif Noor"
+title                    : "Profile"
 title_separator          : "-"
 name                     : &name "Tasrif"
 description              : &description "personal description"
