@@ -14,9 +14,9 @@ layout: default
   {% endunless %}
 {% endif %}
 
-<!-- 3D Hero Section -->
-<div id="hero-3d" class="hero-3d-section">
-  <canvas id="hero-canvas"></canvas>
+<!-- 3D Hero Section replaced with animated image -->
+<div id="hero-3d" class="hero-3d-section" style="display: flex; align-items: center; justify-content: center; background: transparent;">
+  <img src="{{ base_path }}/images/cube.webp" alt="Animated Rubik's Cube" class="hero-cube-img" style="max-height: 100%; max-width: 100%; object-fit: contain;" />
   <div class="hero-content">
     <!-- <h1 class="hero-title">{{ site.title }}</h1> -->
     <p class="hero-subtitle">ML & CV Researcher</p>
@@ -38,9 +38,6 @@ layout: default
   </div>
 </div>
 
-<!-- Three.js and 3D Model Scripts -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
-
 <style>
 .hero-3d-section {
   position: relative;
@@ -54,16 +51,12 @@ layout: default
   justify-content: center;
   box-shadow: 0 4px 20px rgba(0,0,0,0.1);
 }
-
-#hero-canvas {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
+.hero-cube-img {
+  display: block;
   height: 100%;
-  z-index: 1;
+  max-width: 100%;
+  margin-right: 0;
 }
-
 .hero-content {
   position: absolute;
   top: 50%;
@@ -81,7 +74,6 @@ layout: default
   max-width: 400px;
   white-space: nowrap;
 }
-
 .hero-title {
   font-size: 3rem;
   font-weight: bold;
@@ -92,7 +84,6 @@ layout: default
   -webkit-text-fill-color: transparent;
   background-clip: text;
 }
-
 .hero-subtitle {
   font-size: 1rem;
   opacity: 1;
@@ -188,145 +179,4 @@ layout: default
     font-size: 0.8rem;
   }
 }
-</style>
-
-<script>
-// Three.js 3D Scene Setup
-let scene, camera, renderer, model;
-let animationId;
-let mouseX = 0, mouseY = 0;
-let modelMaterials = [];
-
-// Rubik's Cube parameters
-const cubeSize = 1;
-const gap = 0.05;
-const stickerSize = 0.9;
-const stickerOffset = 0.51;
-const cubelets = [];
-const cubeGroup = new THREE.Group();
-
-// Rubik's cube face colors (standard)
-const faceColors = [
-  0xffffff, // right (x=+1) - white
-  0xffff00, // left  (x=-1) - yellow
-  0xff0000, // top   (y=+1) - red
-  0x0000ff, // bottom(y=-1) - blue
-  0x00ff00, // front (z=+1) - green
-  0xffa500  // back  (z=-1) - orange
-];
-const black = 0x222222;
-
-function init3DScene() {
-  // Scene setup
-  scene = new THREE.Scene();
-  // scene.background = new THREE.Color(0x667eea);
-  
-  // Camera setup
-  camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
-  camera.position.z = 5;
-  
-  // Renderer setup
-  const canvas = document.getElementById('hero-canvas');
-  renderer = new THREE.WebGLRenderer({ canvas: canvas, antialias: true, alpha: true });
-  renderer.setClearColor(0x000000, 0);
-  renderer.setSize(canvas.clientWidth, canvas.clientHeight);
-  renderer.setPixelRatio(window.devicePixelRatio);
-  
-  // Lighting
-  const ambientLight = new THREE.AmbientLight(0xffffff, 0.5);
-  scene.add(ambientLight);
-  
-  const directionalLight = new THREE.DirectionalLight(0xffffff, 0.7);
-  directionalLight.position.set(5, 10, 7.5);
-  scene.add(directionalLight);
-  
-  const pointLight = new THREE.PointLight(0x2196f3, 1, 100); // blue light
-  pointLight.position.set(-5, 5, 5);
-  scene.add(pointLight);
-  
-  const pointLight2 = new THREE.PointLight(0xff4081, 0.7, 100); // pink light
-  pointLight2.position.set(5, -5, 5);
-  scene.add(pointLight2);
-  
-  // Load 3D model
-  for (let x = -1; x <= 1; x++) {
-    for (let y = -1; y <= 1; y++) {
-      for (let z = -1; z <= 1; z++) {
-        // Black cubelet
-        const geometry = new THREE.BoxGeometry(cubeSize, cubeSize, cubeSize);
-        const material = new THREE.MeshStandardMaterial({ color: black });
-        const cubelet = new THREE.Mesh(geometry, material);
-        cubelet.position.set(
-          x * (cubeSize + gap),
-          y * (cubeSize + gap),
-          z * (cubeSize + gap)
-        );
-
-        // Stickers
-        // Right face (x=+1)
-        if (x === 1) addSticker(cubelet, [stickerOffset, 0, 0], [0, Math.PI / 2, 0], faceColors[0]);
-        // Left face (x=-1)
-        if (x === -1) addSticker(cubelet, [-stickerOffset, 0, 0], [0, -Math.PI / 2, 0], faceColors[1]);
-        // Top face (y=+1)
-        if (y === 1) addSticker(cubelet, [0, stickerOffset, 0], [-Math.PI / 2, 0, 0], faceColors[2]);
-        // Bottom face (y=-1)
-        if (y === -1) addSticker(cubelet, [0, -stickerOffset, 0], [Math.PI / 2, 0, 0], faceColors[3]);
-        // Front face (z=+1)
-        if (z === 1) addSticker(cubelet, [0, 0, stickerOffset], [0, 0, 0], faceColors[4]);
-        // Back face (z=-1)
-        if (z === -1) addSticker(cubelet, [0, 0, -stickerOffset], [0, Math.PI, 0], faceColors[5]);
-
-        cubeGroup.add(cubelet);
-        cubelets.push(cubelet);
-      }
-    }
-  }
-  
-  scene.add(cubeGroup);
-  camera.position.set(0, 0, 7);
-  
-  // Animation loop
-  function animate() {
-    animationId = requestAnimationFrame(animate);
-    cubeGroup.rotation.y += 0.01;
-    renderer.render(scene, camera);
-  }
-  
-  animate();
-  
-  // Mouse interaction
-  document.addEventListener('mousemove', function(event) {
-    mouseX = (event.clientX - window.innerWidth / 2) / (window.innerWidth / 2);
-    mouseY = (event.clientY - window.innerHeight / 2) / (window.innerHeight / 2);
-  });
-}
-
-function onWindowResize() {
-  const canvas = document.getElementById('hero-canvas');
-  camera.aspect = canvas.clientWidth / canvas.clientHeight;
-  camera.updateProjectionMatrix();
-  renderer.setSize(canvas.clientWidth, canvas.clientHeight);
-}
-
-// Initialize when DOM is loaded
-document.addEventListener('DOMContentLoaded', function() {
-  init3DScene();
-  window.addEventListener('resize', onWindowResize);
-});
-
-// Cleanup on page unload
-window.addEventListener('beforeunload', function() {
-  if (animationId) {
-    cancelAnimationFrame(animationId);
-  }
-});
-
-function addSticker(parent, position, rotation, color) {
-  const geometry = new THREE.PlaneGeometry(stickerSize, stickerSize);
-  const material = new THREE.MeshBasicMaterial({ color: color });
-  const sticker = new THREE.Mesh(geometry, material);
-  sticker.position.set(...position);
-  sticker.rotation.set(...rotation);
-  parent.add(sticker);
-}
-</script> 
+</style> 
