@@ -234,7 +234,7 @@ function init3DScene() {
   if (typeof THREE.GLTFLoader !== 'undefined') {
     const gltfLoader = new THREE.GLTFLoader();
     gltfLoader.load(
-      '{{ base_path }}/images/cover.glb',
+      '{{ site.baseurl }}/images/cover.glb',
       function(gltf) {
         model = gltf.scene;
         
