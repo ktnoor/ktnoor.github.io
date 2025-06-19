@@ -1,3 +1,9 @@
+# My Profile
+This is my personal profile page: [https://ktnoor.github.io/](https://ktnoor.github.io/).
+The project is built using the [Academic Pages](https://academicpages.github.io/) template, which is a Jekyll theme designed for academic and professional portfolio websites.
+
+---
+
 # Academic Pages
 **Academic Pages is a GitHub Pages template for personal and professional portfolio-oriented websites.**
 

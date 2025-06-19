@@ -1,6 +1,6 @@
 ---
-layout: archive
-title: "Curriculum Vitae: <em>Khondaker Tasrif Noor</em>"
+layout: cv
+# title: "Curriculum Vitae: <em>Khondaker Tasrif Noor</em>"
 permalink: /cv/
 author_profile: true
 redirect_from:
@@ -9,13 +9,6 @@ redirect_from:
 
 {% include base_path %}
 
-<!-- [Khondaker Tasrif Noor](http://ktnoor.github.io/files/KTNoor_CV.pdf "Khondaker Tasrif Noor") -->
-
-<p align="center">
-  <a href="/files/KTNoor_CV.pdf" style="color: red; font-size: 1.5em; font-weight: bold;">
-    Download my CV as PDF
-  </a>
-</p>
 
 Profile
 ======
@@ -105,3 +98,16 @@ Additional Information
 
 - **Peer Reviewer:** Reviewed papers for conferences such as KSEM, AICCSA, ECAI, PAKDD and journals such as Pattern Recognition, Information fusion, Neurocomputing, Neural computing and applications, and MethodsX. The updated list of my peer reviews can be found [here](https://orcid.org/0000-0002-4259-9539#:~:text=Peer%20review%20(16%20reviews%C2%A0for%207%20publications/grants)).
 
+References
+======
+- Dr. Wei Luo, Deakin University, Australia
+- Prof. Antonio Robles-Kelly, Deakin University, Australia
+- Dr. Mohamed R. Bouadjenek, Deakin University, Australia
+
+<!-- [Khondaker Tasrif Noor](http://ktnoor.github.io/files/KTNoor_CV.pdf "Khondaker Tasrif Noor") -->
+
+<p align="center">
+  <a href="/files/KTNoor_CV.pdf" style="color: red; font-size: 1.5em; font-weight: bold;">
+    Download my CV as PDF
+  </a>
+</p>
