@@ -1,6 +1,11 @@
 ---
 layout: default
 ---
+{% include base_path %}
+
+{% if page.author and site.data.authors[page.author] %}
+  {% assign author = site.data.authors[page.author] %}{% else %}{% assign author = site.author %}
+{% endif %}
 
 {% if page.header.overlay_color or page.header.overlay_image or page.header.image %}
   {% include page__hero.html %}
@@ -12,13 +17,96 @@ layout: default
   {% endunless %}
 {% endif %}
 
+<style>
+  /* Override archive spacing to remove sidebar gap */
+  .archive {
+    margin-bottom: 2em;
+    max-width: 100% !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    width: 100% !important;
+  }
+  
+  /* Override any span/padding from the theme */
+  @media (min-width: 1024px) {
+    .archive {
+      width: 100% !important;
+      margin-left: 0 !important;
+      padding-left: 0 !important;
+    }
+  }
+  
+  .profile-header {
+    display: flex;
+    align-items: center;
+    background: #f8f9fa;
+    border: 1px solid #e9ecef;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 30px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  }
+  
+  .profile-picture {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 20px;
+    border: 3px solid #16354e;
+  }
+  
+  .profile-info {
+    flex: 1;
+  }
+  
+  .profile-name {
+    font-size: 1.2em;
+    /* font-weight: bold; */
+    color: #16354e;
+    margin: 0 0 8px 0;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  
+  .profile-details {
+    color: #6c757d;
+    font-size: 1em;
+    line-height: 1.4;
+    margin: 0;
+  }
+  
+  .archive h1 {
+    text-align: center;
+    font-size: 2em;
+    color: #16354e;
+    margin-bottom: 30px;
+  }
+</style>
+
 <div id="main" role="main">
-  {% include sidebar.html %}
+  <!-- Custom Profile Header -->
+  <div class="profile-header">
+    <!-- <img src="{{ site.url }}/images/Picture-knoor.png" alt="Profile Picture" class="profile-picture"> -->
+    {% if author.avatar contains "://" %}
+    <img src="{{ author.avatar }}" alt="{{ author.name }}">
+    {% else %}
+      <img src="{{ author.avatar | prepend: "/images/" | prepend: base_path }}" class="profile-picture" alt="{{ author.name }}">
+    {% endif %}
+    <div class="profile-info">
+      <h2 class="profile-name">Khondaker Tasrif Noor</h2>
+      <p class="profile-details">
+        PhD Candidate in Computer Vision | Machine Learning Researcher<br>
+        Deakin University | Specializing in Hierarchical Classification & Deep Learning<br>
+        Email: k.noor@research.deakin.edu.au | ktnoor.ai@gmail.com
+      </p>
+    </div>
+  </div>
 
   <div class="archive">
     {% unless page.header.overlay_color or page.header.overlay_image %}
-      <h1 class="page__title" style="text-align: center;font-size: 2em;">{{ page.title }}</h1>
-      <!-- <h1 class="page__title">{{ page.title }}</h1> -->
+      <h1 class="page__title">{{ page.title }}</h1>
     {% endunless %}
     {{ content }}
   </div>
