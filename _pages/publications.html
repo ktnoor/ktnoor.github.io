@@ -7,28 +7,48 @@ author_profile: true
 
 {% include base_path %}
 
-<!-- New style rendering if publication categories are defined -->
-{% if site.publication_category %}
-  {% for category in site.publication_category  %}
-    {% assign title_shown = false %}
-    {% for post in site.publications reversed %}
-      {% if post.category != category[0] %}
-        {% continue %}
-      {% endif %}
-      {% unless title_shown %}
-        <h2>{{ category[1].title }}</h2><hr />
-        {% assign title_shown = true %}
-      {% endunless %}
-      {% include archive-single.html %}
-    {% endfor %}
-  {% endfor %}
-{% else %}
-  {% for post in site.publications reversed %}
-    {% include archive-single.html %}
-  {% endfor %}
-{% endif %}
+<style>
+.publication-list { list-style: decimal; margin-left: 2em; }
+.publication-item { margin-bottom: 0.5em; cursor: pointer; }
+.publication-title { font-weight: bold; cursor: pointer; }
+.publication-details { display: none; margin-top: 0.2em; margin-bottom: 0.5em; padding-left: 1.5em; background: #f7f7f7; border-left: 3px solid #16354e; border-radius: 0 4px 4px 0; }
+.publication-item.active .publication-details { display: block; }
+.publication-item.active .publication-title { color: #16354e; }
+</style>
 
+<div id="publications-accordion">
+{% assign pubs = site.publications | sort: 'date' | reverse %}
+{% assign pubs_by_year = pubs | group_by_exp: 'post', 'post.date | date: "%Y"' %}
+{% assign counter = pubs.size %}
+{% for year_group in pubs_by_year %}
+  <h2>{{ year_group.name }}</h2>
+  <ol class="publication-list" start="{{ counter }}">
+  {% for post in year_group.items %}
+    <li class="publication-item" data-index="{{ counter }}">
+      <span class="publication-title" onclick="expandPublication(event, {{ counter }})">{% if post.citation %}{{ post.citation }}{% else %}{{ post.title }}{% endif %}</span>
+      <div class="publication-details" id="pub-details-{{ counter }}">
+        {% if post.content %}<div>{{ post.content | markdownify }}</div>{% endif %}
+        {% if post.paperurl %}<div><a href="{{ post.paperurl }}" target="_blank">Download Paper</a></div>{% endif %}
+        {% if post.slidesurl %}<div><a href="{{ post.slidesurl }}" target="_blank">Download Slides</a></div>{% endif %}
+      </div>
+    </li>
+    {% assign counter = counter | minus: 1 %}
+  {% endfor %}
+  </ol>
+{% endfor %}
+</div>
 
+<script>
+function expandPublication(event, idx) {
+  // Close all
+  document.querySelectorAll('.publication-item').forEach(function(item) {
+    item.classList.remove('active');
+  });
+  // Open the clicked one
+  var li = event.target.closest('.publication-item');
+  if (li) li.classList.add('active');
+}
+</script>
 
 {% if site.author.googlescholar %}
   <div class="wordwrap">You can also find my articles on <a href="{{site.author.googlescholar}}">my Google Scholar profile</a>.</div>
