@@ -12,13 +12,32 @@ layout: default
   {% endunless %}
 {% endif %}
 
+<style>
+  .archive h2 {
+    text-align: center;
+    font-size: 1.6em;
+    /* font-weight: bold; */
+    /* text-transform: uppercase; */
+    letter-spacing: 3px;
+    padding: 2px;
+    margin: 2em 0 2em 0;
+    border-radius: 2px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.3);
+    font-family: Arial, Helvetica, sans-serif;
+    background: #efeded;
+    border-bottom: 2px solid #16354e;
+    padding-bottom: 2px;
+    margin-bottom: 2px;
+    color: #16354e;
+  }
+</style>
+
 <div id="main" role="main">
   {% include sidebar.html %}
 
   <div class="archive">
     {% unless page.header.overlay_color or page.header.overlay_image %}
-      <h1 class="page__title" style="text-align: center;font-size: 2em;">{{ page.title }}</h1>
-      <!-- <h1 class="page__title">{{ page.title }}</h1> -->
+      <h1 class="page__title">{{ page.title }}</h1>
     {% endunless %}
     {{ content }}
   </div>
