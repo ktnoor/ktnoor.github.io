@@ -123,16 +123,7 @@ layout: default
     /* No margin-bottom here */
   }
   
-  .archive.no-title {
-    margin-top: 0 !important;
-    padding-top: 0 !important;
-  }
-  
-  .profile-header.no-title {
-    margin-bottom: 0 !important;
-  }
-
-  .heading-title h2 {
+  .archive h2 {
     text-align: left;
     font-size: 1.6em;
     /* font-weight: bold; */
@@ -149,6 +140,30 @@ layout: default
     padding-bottom: 2px;
     margin-bottom: 2px;
     color: #16354e;
+  }
+
+  .archive h3 {
+    text-align: left;
+    font-size: 1.2em;
+    letter-spacing: 2px;
+    text-indent: 8px;
+    padding: 2px;
+    margin: 1.5em 0 1em 0;
+    border-radius: 2px;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.15);
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f5f5f5;
+    border-bottom: 2px solid #16354e;
+    color: #16354e;
+  }
+  
+  .archive.no-title {
+    margin-top: 0 !important;
+    padding-top: 0 !important;
+  }
+  
+  .profile-header.no-title {
+    margin-bottom: 0 !important;
   }
 </style>
 
@@ -217,8 +232,6 @@ layout: default
         <h1 class="page__title">{{ page.title }}</h1>
       {% endif %}
     {% endunless %}
-    <div class="heading-title">
-      {{ content }}
-    </div>
+    {{ content }}
   </div>
 </div>
