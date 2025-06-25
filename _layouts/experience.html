@@ -4,9 +4,29 @@ layout: default
 
 {% include base_path %}
 
-<div id="main" role="main">
-  {% include sidebar.html %}
+<style>
+  /* Override archive spacing to remove sidebar gap */
+  .archive {
+    margin-bottom: 2em;
+    max-width: 100% !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    width: 100% !important;
+  }
+  
+  /* Override any span/padding from the theme */
+  @media (min-width: 1024px) {
+    .archive {
+      width: 100% !important;
+      margin-left: 0 !important;
+      padding-left: 0 !important;
+    }
+  }
+</style>
 
+<div id="main" role="main">
   <article class="page" itemscope itemtype="http://schema.org/CreativeWork">
     {% if page.title %}<meta itemprop="headline" content="{{ page.title | markdownify | strip_html | strip_newlines | escape_once }}">{% endif %}
     {% if page.date %}<meta itemprop="datePublished" content="{{ page.date | date: "%B %d, %Y" }}">{% endif %}
