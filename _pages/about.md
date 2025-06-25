@@ -41,4 +41,4 @@ I have authored and co-authored several research papers, articles, and conferenc
 
 ## <a name="head-contact"></a>Contact
 
-I am always open to discussions, collaborations, and research opportunities. If you would like to get in touch with me, please feel free to reach out via [Email](mailto:k.noor@research.deakin.edu.au,ktnoor.ai@gmail.com).
+I am always open to discussions, collaborations, and research opportunities. If you would like to get in touch with me, please feel free to reach out via [Email](mailto:ktnoor.ai@gmail.com;k.noor@research.deakin.edu.au).

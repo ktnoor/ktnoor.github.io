@@ -6,6 +6,7 @@ Name Name:
   email       : "k.noor@research.deakin.edu.au"
   bio         : "Khondaker Tasrif Noor is a researcher in the field of Deep Learning and Computer Vision. He is currently pursuing his Ph.D. at Deakin University, Australia. His research interests include Deep Learning, Computer Vision, and Machine Learning."
   avatar      : "Picture-knoor.png"
+  organization_logo: "deakin-logo.png"  # or your logo filename
 
 # Name2 Name2:
 #   name        : "Name2 Name2"
