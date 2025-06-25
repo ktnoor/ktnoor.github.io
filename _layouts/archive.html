@@ -17,6 +17,12 @@ layout: default
   {% endunless %}
 {% endif %}
 
+{% unless page.title %}
+  <style>
+    .archive { margin-top: 0 !important; padding-top: 0 !important; }
+  </style>
+{% endunless %}
+
 <style>
   /* Override archive spacing to remove sidebar gap */
   .archive {
@@ -57,9 +63,9 @@ layout: default
   }
   
   .profile-picture {
-    width: 120px;
-    height: 120px;
-    border-radius: 50%;
+    width: 160px;
+    height: 160px;
+    border-radius: 30%;
     object-fit: cover;
     margin-right: 20px;
     border: 1px solid #16354e;
@@ -104,8 +110,8 @@ layout: default
   }
   
   .organization-logo {
-    width: 200px;
-    height: 200px;
+    width: 160px;
+    height: 160px;
     object-fit: contain;
     margin-left: 20px;
   }
@@ -114,13 +120,41 @@ layout: default
     text-align: center;
     font-size: 2em;
     color: #16354e;
-    margin-bottom: 30px;
+    /* No margin-bottom here */
+  }
+  
+  .archive.no-title {
+    margin-top: 0 !important;
+    padding-top: 0 !important;
+  }
+  
+  .profile-header.no-title {
+    margin-bottom: 0 !important;
+  }
+
+  .heading-title h2 {
+    text-align: left;
+    font-size: 1.6em;
+    /* font-weight: bold; */
+    /* text-transform: uppercase; */
+    letter-spacing: 3px;
+    text-indent: 10px;
+    padding: 2px;
+    margin: 2em 0 2em 0;
+    border-radius: 2px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.3);
+    font-family: Arial, Helvetica, sans-serif;
+    background: #efeded;
+    border-bottom: 2px solid #16354e;
+    padding-bottom: 2px;
+    margin-bottom: 2px;
+    color: #16354e;
   }
 </style>
 
 <div id="main" role="main">
   <!-- Custom Profile Header -->
-  <div class="profile-header">
+  <div class="profile-header{% unless page.title %} no-title{% endunless %}">
     <div class="profile-left">
       <!-- <img src="{{ site.url }}/images/Picture-knoor.png" alt="Profile Picture" class="profile-picture"> -->
       {% if author.avatar contains "://" %}
@@ -177,10 +211,14 @@ layout: default
     {% endif %}
   </div>
 
-  <div class="archive">
+  <div class="archive{% unless page.title %} no-title{% endunless %}">
     {% unless page.header.overlay_color or page.header.overlay_image %}
-      <h1 class="page__title">{{ page.title }}</h1>
+      {% if page.title %}
+        <h1 class="page__title">{{ page.title }}</h1>
+      {% endif %}
     {% endunless %}
-    {{ content }}
+    <div class="heading-title">
+      {{ content }}
+    </div>
   </div>
 </div>

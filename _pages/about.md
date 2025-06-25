@@ -1,10 +1,11 @@
 ---
-layout: about
+layout: archive
 permalink: /
 author_profile: true
 redirect_from: 
   - /about/
   - /about.html
+# title: "Title"
 ---
 
 ## About Me
