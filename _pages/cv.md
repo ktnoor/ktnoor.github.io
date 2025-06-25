@@ -10,32 +10,32 @@ redirect_from:
 {% include base_path %}
 
 
-Profile
-======
+## Profile
+
 A highly competent researcher with a strong focus on deep learning, specifically experienced in neural network architecture design, algorithm implementation, and advanced AI model and system testing. I have strong communication and project planning skills within collaborative team environments. My PhD research focuses on innovative neural network methodologies, and I am pursuing a career to leverage my research, technical, and design expertise within artificial intelligence systems to unlock new possibilities in the field.
 
-Education
-======
+## Education
+
 * Ph.D in Computer vision, Deakin University, 2025 (expected)
 * Master of Engineering in Electronics Engineering, Macquarie University, 2019
 * B.S. in Electrical and Electronics Engineering, BRAC University, 2016
 
-Work experience
-======
+## Work experience
+
   <ul>
     {% for post in site.experience reversed %}
       {% include experience-single.html %}
     {% endfor %}
   </ul>
 
-Research and Publications
-======
+## Research and Publications
+
   <ul>{% for post in site.publications reversed %}
     {% include archive-single-cv.html %}
   {% endfor %}</ul>
   
-Skills and Expertise
-======
+## Skills and Expertise
+
 **Software and Technical Skills**
 - **Documentation and Office Tools**: Proficient with Microsoft Office (Word, Excel, PowerPoint, Access, Project) and LaTeX for professional documentation and record keeping.
 
@@ -82,8 +82,8 @@ Skills and Expertise
 - **RF Implementation and Regulatory Compliance**: Hands-on experience in designing, testing, and analysing RF modules, including regression testing and certification procedures to meet regional regulatory standards.
 - **Project Management**: Proficient in planning, coordination, and execution of academic and professional projects, ensuring timely delivery and quality outcomes.
 
-Additional Information
-======
+## Additional Information
+
 - Successfully participated and completed *Empowering Innovative Leaders Program, (2024)* at Deakin University.
 
 - **Certifications**:
@@ -98,8 +98,8 @@ Additional Information
 
 - **Peer Reviewer:** Reviewed papers for conferences such as KSEM, AICCSA, ECAI, PAKDD and journals such as Pattern Recognition, Information fusion, Neurocomputing, Neural computing and applications, and MethodsX. The updated list of my peer reviews can be found [here](https://orcid.org/0000-0002-4259-9539#:~:text=Peer%20review%20(16%20reviews%C2%A0for%207%20publications/grants)).
 
-References
-======
+## References
+
 - Dr. Wei Luo, Deakin University, Australia
 - Prof. Antonio Robles-Kelly, Deakin University, Australia
 - Dr. Mohamed R. Bouadjenek, Deakin University, Australia
