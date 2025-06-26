@@ -1,203 +1,229 @@
 /* ==========================================================================
-   CUSTOM NAVIGATION STYLES
+   CUSTOM NAVIGATION STYLES - MATCHING REFERENCE WEBSITE
    ========================================================================== */
 
 /* Increase masthead height for bigger navigation */
 .masthead {
-  height: 90px !important; /* Increased from 70px */
+  height: 80px !important;
 }
 
 /* Adjust body padding to account for taller masthead */
 body {
-  padding-top: 90px !important; /* Increased from 70px */
+  padding-top: 80px !important;
 }
 
-/* Make navigation menu items bigger and more professional */
+/* Reset and override all original greedy-nav styles */
 .greedy-nav {
-  min-width: 300px; /* Increased from 250px */
+  min-width: auto !important;
+  width: 100% !important;
+  max-width: none !important;
+  background: var(--global-bg-color) !important;
+  position: relative !important;
+}
+
+/* Completely reset original anchor styles */
+.greedy-nav a {
+  display: block !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  color: var(--global-masthead-link-color) !important;
+  text-decoration: none !important;
+  background: transparent !important;
+  border: none !important;
+}
+
+/* Remove original hover effects */
+.greedy-nav a:hover {
+  color: var(--global-masthead-link-color-hover) !important;
+  background: transparent !important;
+}
+
+/* Remove the underline animation */
+.greedy-nav .visible-links a:before {
+  display: none !important;
+}
+
+/* Clean navigation layout exactly like reference website */
+.greedy-nav .visible-links {
+  display: flex !important;
+  justify-content: space-evenly !important;
+  align-items: center !important;
+  width: 100% !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  list-style: none !important;
+  gap: 0 !important;
+}
+
+.greedy-nav .visible-links li {
+  flex: 1 !important;
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  background: transparent !important;
+  list-style: none !important;
+  text-align: center !important;
+}
+
+/* Override large class */
+.greedy-nav .visible-links li.masthead__menu-item--lg {
+  flex: 1 !important;
+  padding-right: 0 !important;
+  font-weight: bold !important;
+}
+
+/* Clean navigation links - exactly like reference website */
+.greedy-nav .visible-links li a {
+  padding: 1rem 0.5rem !important;
+  margin: 0 !important;
+  border: none !important;
+  background: transparent !important;
+  color: var(--global-masthead-link-color) !important;
+  font-weight: 600 !important;
+  font-size: 1rem !important;
+  text-decoration: none !important;
+  transition: color 0.3s ease !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  width: 100% !important;
+  text-align: center !important;
+  white-space: nowrap !important;
+  box-sizing: border-box !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  transform: none !important;
+}
+
+/* Simple hover effect - just color change */
+.greedy-nav .visible-links li a:hover {
+  color: var(--global-masthead-link-color-hover) !important;
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+  transform: none !important;
+}
+
+/* Active state - simple underline or color change */
+.greedy-nav .visible-links li a.active {
+  color: var(--global-base-color) !important;
+  background: transparent !important;
+  border: none !important;
+  border-bottom: 2px solid var(--global-base-color) !important;
+  box-shadow: none !important;
+  transform: none !important;
+  position: relative !important;
+}
+
+/* Remove any after pseudo elements */
+.greedy-nav .visible-links li a.active::after {
+  display: none !important;
+}
+
+/* Active hover - keep the active state */
+.greedy-nav .visible-links li a.active:hover {
+  color: var(--global-base-color) !important;
+  background: transparent !important;
+  border: none !important;
+  border-bottom: 2px solid var(--global-base-color) !important;
+  box-shadow: none !important;
+  transform: none !important;
+}
+
+/* Clean dropdown styling */
+.greedy-nav .hidden-links {
+  margin-top: 10px !important;
+  border-radius: 4px !important;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1) !important;
+  background: var(--global-bg-color) !important;
+  border: 1px solid var(--global-border-color) !important;
+}
+
+.greedy-nav .hidden-links a {
+  padding: 0.75rem 1rem !important;
+  margin: 0 !important;
+  border: none !important;
+  background: transparent !important;
+  color: var(--global-masthead-link-color) !important;
+  font-weight: 500 !important;
+  border-bottom: 1px solid var(--global-border-color) !important;
+}
+
+.greedy-nav .hidden-links a:hover {
+  background: var(--global-border-color) !important;
+  color: var(--global-masthead-link-color-hover) !important;
+}
+
+.greedy-nav .hidden-links a.active {
+  color: var(--global-base-color) !important;
+  background: transparent !important;
+  font-weight: 600 !important;
+}
+
+.greedy-nav .hidden-links a.active:hover {
+  color: var(--global-base-color) !important;
+  background: var(--global-border-color) !important;
+}
+
+/* Simple hamburger button */
+.greedy-nav button {
+  height: 2.5rem !important;
+  width: 2.5rem !important;
+  padding: 0 !important;
+  border: none !important;
+  background: transparent !important;
+  color: var(--global-masthead-link-color) !important;
+  cursor: pointer !important;
+  position: absolute !important;
+  right: 0 !important;
+  top: 50% !important;
+  transform: translateY(-50%) !important;
+  z-index: 100 !important;
+}
+
+.greedy-nav button:hover {
+  background: var(--global-border-color) !important;
+  color: var(--global-masthead-link-color-hover) !important;
+}
+
+/* Match page content width exactly like reference */
+.masthead__inner-wrap {
+  width: 100% !important;
+  max-width: 1280px !important;
+  margin: 0 auto !important;
+  padding: 0 2rem !important;
+  display: flex !important;
+  align-items: center !important;
+  height: 80px !important;
   
-  .visible-links {
-    li {
-      /* Make all menu items bold and bigger */
-      font-weight: bold !important;
-      font-size: 1.0em;
-      
-      /* Add spacing between menu items */
-      margin: 0 0.5rem;
-      
-      a {
-        /* Button-style appearance */
-        padding: 0.75rem 1.25rem !important; /* Increased padding */
-        margin: 0 0.25rem !important;
-        border: 2px solid var(--global-border-color);
-        border-radius: 6px;
-        background: var(--global-bg-color);
-        color: var(--global-masthead-link-color);
-        font-weight: bold;
-        text-decoration: none;
-        transition: all 0.3s ease;
-        display: inline-block;
-        min-width: 120px;
-        text-align: center;
-        
-        /* Hover effects */
-        &:hover {
-          background: var(--global-base-color);
-          color: #fff;
-          border-color: var(--global-base-color);
-          transform: translateY(-2px);
-          box-shadow: 0 4px 8px rgba(0,0,0,0.15);
-        }
-        
-        /* Active state - enhanced styling */
-        &.active {
-          background: var(--global-base-color) !important;
-          color: #fff !important;
-          border-color: var(--global-base-color) !important;
-          transform: translateY(-1px);
-          box-shadow: 0 3px 6px rgba(0,0,0,0.2);
-          position: relative;
-          
-          /* Add a subtle glow effect for active state */
-          &::after {
-            content: '';
-            position: absolute;
-            top: -2px;
-            left: -2px;
-            right: -2px;
-            bottom: -2px;
-            background: linear-gradient(45deg, var(--global-base-color), var(--global-masthead-link-color-hover));
-            border-radius: 8px;
-            z-index: -1;
-            opacity: 0.3;
-          }
-          
-          &:hover {
-            background: var(--global-masthead-link-color-hover) !important;
-            border-color: var(--global-masthead-link-color-hover) !important;
-            transform: translateY(-2px);
-            box-shadow: 0 4px 8px rgba(0,0,0,0.25);
-          }
-        }
-      }
-    }
-    
-    /* Special styling for home icon (first child) - now matches other items */
-    li:first-child {
-      a {
-        background: var(--global-bg-color);
-        color: var(--global-masthead-link-color);
-        border-color: var(--global-border-color);
-        font-weight: bold;
-        
-        &:hover {
-          background: var(--global-base-color);
-          color: #fff;
-          border-color: var(--global-base-color);
-          transform: translateY(-2px);
-          box-shadow: 0 4px 8px rgba(0,0,0,0.15);
-        }
-        
-        /* Active state for home icon */
-        &.active {
-          background: var(--global-base-color) !important;
-          color: #fff !important;
-          border-color: var(--global-base-color) !important;
-          transform: translateY(-1px);
-          box-shadow: 0 3px 6px rgba(0,0,0,0.2);
-          
-          &::after {
-            content: '';
-            position: absolute;
-            top: -2px;
-            left: -2px;
-            right: -2px;
-            bottom: -2px;
-            background: linear-gradient(45deg, var(--global-base-color), var(--global-masthead-link-color-hover));
-            border-radius: 8px;
-            z-index: -1;
-            opacity: 0.3;
-          }
-          
-          &:hover {
-            background: var(--global-masthead-link-color-hover) !important;
-            border-color: var(--global-masthead-link-color-hover) !important;
-            transform: translateY(-2px);
-            box-shadow: 0 4px 8px rgba(0,0,0,0.25);
-          }
-        }
-      }
-    }
+  @media screen and (max-width: 1024px) {
+    padding: 0 1.5rem !important;
   }
   
-  /* Style the hidden links dropdown */
-  .hidden-links {
-    margin-top: 10px;
-    border-radius: 8px;
-    box-shadow: 0 6px 20px rgba(0,0,0,0.15);
-    
-    a {
-      padding: 0.75rem 1.5rem !important;
-      font-weight: bold;
-      font-size: 1em;
-      border: 1px solid var(--global-border-color);
-      margin: 0.25rem 0;
-      border-radius: 4px;
-      
-      &:hover {
-        background: var(--global-base-color);
-        color: #fff;
-        border-color: var(--global-base-color);
-      }
-      
-      /* Active state for hidden links */
-      &.active {
-        background: var(--global-base-color) !important;
-        color: #fff !important;
-        border-color: var(--global-base-color) !important;
-        box-shadow: 0 2px 4px rgba(0,0,0,0.15);
-      }
-    }
+  @media screen and (max-width: 768px) {
+    padding: 0 1rem !important;
   }
-  
-  /* Style the hamburger menu button */
-  button {
-    height: 3rem !important; /* Increased from 2.5rem */
-    padding: 0 0.75rem !important;
-    border-radius: 6px;
-    font-weight: bold;
-    
-    &:hover {
-      background: var(--global-masthead-link-color-hover);
-    }
-  }
+}
+
+.masthead__menu {
+  width: 100% !important;
+  display: flex !important;
+  align-items: center !important;
 }
 
 /* Responsive adjustments */
-@media screen and (max-width: 1024px) {
-  .greedy-nav {
-    .visible-links {
-      li {
-        a {
-          padding: 0.6rem 1rem !important;
-          min-width: 100px;
-          font-size: 1em;
-        }
-      }
-    }
+@media screen and (max-width: 768px) {
+  .greedy-nav .visible-links li a {
+    padding: 0.75rem 0.25rem !important;
+    font-size: 0.9rem !important;
   }
 }
 
-@media screen and (max-width: 768px) {
-  .greedy-nav {
-    .visible-links {
-      li {
-        a {
-          padding: 0.5rem 0.75rem !important;
-          min-width: 80px;
-          font-size: 0.9em;
-        }
-      }
-    }
+@media screen and (max-width: 480px) {
+  .greedy-nav .visible-links li a {
+    padding: 0.5rem 0.15rem !important;
+    font-size: 0.8rem !important;
   }
 } 
