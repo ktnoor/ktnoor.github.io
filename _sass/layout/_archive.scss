@@ -249,8 +249,8 @@
    ========================================================================== */
 
 .cv-author-profile {
-  margin-bottom: 2em;
-  padding: 2em;
+  margin-bottom: 1em;
+  padding: 1em;
   background: var(--global-bg-color);
   border: 1px solid var(--global-border-color);
   border-radius: $border-radius;
@@ -260,12 +260,12 @@
     display: block;
     width: auto;
     height: auto;
-    margin: 0 auto 1em;
+    margin: 0 auto 0.5em;
 
     img {
-      max-width: 200px;
+      max-width: 150px;
       border-radius: 50%;
-      padding: 5px;
+      padding: 3px;
       border: 2px solid var(--global-border-color);
     }
   }
@@ -278,20 +278,20 @@
     text-align: center;
 
     .author__name {
-      margin: 0.5em 0;
-      font-size: $type-size-3;
+      margin: 0.25em 0;
+      font-size: $type-size-4;
       font-weight: bold;
     }
 
     .author__pronouns {
-      margin: 0.5em 0;
-      font-size: $type-size-5;
+      margin: 0.25em 0;
+      font-size: $type-size-6;
     }
   }
 
   .author__urls-wrapper {
     display: block;
-    margin-top: 1em;
+    margin-top: 0.5em;
 
     .author__urls {
       display: block;
@@ -305,7 +305,7 @@
 
       li {
         display: inline-block;
-        margin: 0 0.5em;
+        margin: 0 0.25em;
 
         a {
           color: var(--global-text-color);
@@ -324,16 +324,19 @@
   }
 
   @include breakpoint($medium) {
-    padding: 3em;
+    padding: 1.5em;
     
     .author__avatar img {
-      max-width: 250px;
+      max-width: 180px;
     }
   }
 }
 
 /* CV page specific archive styles */
 .layout-cv .archive {
+  margin-top: 0;
+  margin-bottom: 0em;
+
   @include breakpoint($medium) {
     @include span(12 of 12);
   }
@@ -342,4 +345,19 @@
     @include span(12 of 12);
     @include prefix(0 of 12);
   }
+}
+
+/* Reduce gap between cv-author-profile and archive content */
+.layout-cv .cv-author-profile + .archive {
+  margin-top: 0;
+}
+
+/* Reduce gap between author profile and first heading in CV content */
+.layout-cv .cv-author-profile + .archive h2:first-of-type {
+  margin-top: 0.5em;
+}
+
+/* Also target the first heading in the content area */
+.layout-cv .archive > h2:first-child {
+  margin-top: 0.5em;
 }

@@ -9,7 +9,6 @@ redirect_from:
 
 {% include base_path %}
 
-
 ## Profile
 
 A highly competent researcher with a strong focus on deep learning, specifically experienced in neural network architecture design, algorithm implementation, and advanced AI model and system testing. I have strong communication and project planning skills within collaborative team environments. My PhD research focuses on innovative neural network methodologies, and I am pursuing a career to leverage my research, technical, and design expertise within artificial intelligence systems to unlock new possibilities in the field.
@@ -104,7 +103,6 @@ A highly competent researcher with a strong focus on deep learning, specifically
 - Prof. Antonio Robles-Kelly, Deakin University, Australia
 - Dr. Mohamed R. Bouadjenek, Deakin University, Australia
 
-<!-- [Khondaker Tasrif Noor](http://ktnoor.github.io/files/KTNoor_CV.pdf "Khondaker Tasrif Noor") -->
 
 <p align="center">
   <a href="/files/KTNoor_CV.pdf" style="color: red; font-size: 1.5em; font-weight: bold;">

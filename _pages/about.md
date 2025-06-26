@@ -8,6 +8,8 @@ redirect_from:
 # title: "Title"
 ---
 
+{% include base_path %}
+
 ## About Me
 
 I am a dedicated researcher in machine learning and computer vision, specialising in hierarchical classification and deep learning architectures. Currently, I am completing my PhD in Computer Vision, focusing on Neural Architectures for Hierarchical Classification by Agreement. My work involves designing and implementing advanced neural network models to enhance classification accuracy and interpretability across diverse domains, including facial recognition, medical imaging, and underwater sensing.
