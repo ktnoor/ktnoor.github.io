@@ -14,7 +14,7 @@ author_profile: true
     padding-left: 0;
   }
   .experience-item {
-    margin-bottom: 1.5em;
+    margin-bottom: 1.2em;
     border-bottom: 1px solid #eee;
     padding-bottom: 1em;
     display: flex;
@@ -24,12 +24,12 @@ author_profile: true
   /* Create a proper bullet point container */
   .experience-item::before {
     content: "•";
-    color: #3177b1;
+    color:rgb(0, 0, 0);
     font-weight: bold;
     font-size: 2.5em; /* Make bullet bigger */
     line-height: 1.1em;
     margin-right: 0.5em;
-    margin-top: 0.1em; /* Align with first line */
+    margin-top: 0; /* Top align the bullet */
     flex-shrink: 0; /* Prevent bullet from shrinking */
   }
 
@@ -112,8 +112,8 @@ author_profile: true
     user-select: none;
   }
   .experience-expand:hover {
-    background: #f0f0f0;
-    border-color: #3177b1;
+    background:rgb(192, 179, 179);
+    border-color:rgb(29, 53, 73);
   }
   .exp-arrow {
     display: inline-block;
