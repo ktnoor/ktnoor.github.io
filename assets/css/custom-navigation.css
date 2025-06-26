@@ -1,0 +1,142 @@
+/* ==========================================================================
+   CUSTOM NAVIGATION STYLES
+   ========================================================================== */
+
+/* Increase masthead height for bigger navigation */
+.masthead {
+  height: 90px !important; /* Increased from 70px */
+}
+
+/* Adjust body padding to account for taller masthead */
+body {
+  padding-top: 90px !important; /* Increased from 70px */
+}
+
+/* Make navigation menu items bigger and more professional */
+.greedy-nav {
+  min-width: 300px; /* Increased from 250px */
+  
+  .visible-links {
+    li {
+      /* Make all menu items bold and bigger */
+      font-weight: bold !important;
+      font-size: 1.0em;
+      
+      /* Add spacing between menu items */
+      margin: 0 0.5rem;
+      
+      a {
+        /* Button-style appearance */
+        padding: 0.75rem 1.25rem !important; /* Increased padding */
+        margin: 0 0.25rem !important;
+        border: 2px solid var(--global-border-color);
+        border-radius: 6px;
+        background: var(--global-bg-color);
+        color: var(--global-masthead-link-color);
+        font-weight: bold;
+        text-decoration: none;
+        transition: all 0.3s ease;
+        display: inline-block;
+        min-width: 120px;
+        text-align: center;
+        
+        /* Hover effects */
+        &:hover {
+          background: var(--global-base-color);
+          color: #fff;
+          border-color: var(--global-base-color);
+          transform: translateY(-2px);
+          box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+        }
+        
+        /* Active state */
+        &.active {
+          background: var(--global-base-color);
+          color: #fff;
+          border-color: var(--global-base-color);
+        }
+      }
+    }
+    
+    /* Special styling for home icon (first child) - now matches other items */
+    li:first-child {
+      a {
+        background: var(--global-bg-color);
+        color: var(--global-masthead-link-color);
+        border-color: var(--global-border-color);
+        font-weight: bold;
+        
+        &:hover {
+          background: var(--global-base-color);
+          color: #fff;
+          border-color: var(--global-base-color);
+          transform: translateY(-2px);
+          box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+        }
+      }
+    }
+  }
+  
+  /* Style the hidden links dropdown */
+  .hidden-links {
+    margin-top: 10px;
+    border-radius: 8px;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+    
+    a {
+      padding: 0.75rem 1.5rem !important;
+      font-weight: bold;
+      font-size: 1em;
+      border: 1px solid var(--global-border-color);
+      margin: 0.25rem 0;
+      border-radius: 4px;
+      
+      &:hover {
+        background: var(--global-base-color);
+        color: #fff;
+        border-color: var(--global-base-color);
+      }
+    }
+  }
+  
+  /* Style the hamburger menu button */
+  button {
+    height: 3rem !important; /* Increased from 2.5rem */
+    padding: 0 0.75rem !important;
+    border-radius: 6px;
+    font-weight: bold;
+    
+    &:hover {
+      background: var(--global-masthead-link-color-hover);
+    }
+  }
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 1024px) {
+  .greedy-nav {
+    .visible-links {
+      li {
+        a {
+          padding: 0.6rem 1rem !important;
+          min-width: 100px;
+          font-size: 1em;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .greedy-nav {
+    .visible-links {
+      li {
+        a {
+          padding: 0.5rem 0.75rem !important;
+          min-width: 80px;
+          font-size: 0.9em;
+        }
+      }
+    }
+  }
+} 
