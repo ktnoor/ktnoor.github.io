@@ -52,7 +52,7 @@ body {
   margin: 0 !important;
   padding: 0 !important;
   list-style: none !important;
-  gap: 0 !important;
+  gap: 0.5rem !important;
 }
 
 .greedy-nav .visible-links li {
@@ -74,17 +74,17 @@ body {
   font-weight: bold !important;
 }
 
-/* Clean navigation links - exactly like reference website */
+/* Clean navigation links with borders - exactly like reference website */
 .greedy-nav .visible-links li a {
-  padding: 1rem 0.5rem !important;
+  padding: 0.75rem 1rem !important;
   margin: 0 !important;
-  border: none !important;
-  background: transparent !important;
+  border: 2px solid #d0d0d0 !important;
+  background: var(--global-bg-color) !important;
   color: var(--global-masthead-link-color) !important;
   font-weight: 600 !important;
   font-size: 1rem !important;
   text-decoration: none !important;
-  transition: color 0.3s ease !important;
+  transition: all 0.3s ease !important;
   display: flex !important;
   align-items: center !important;
   justify-content: center !important;
@@ -92,27 +92,26 @@ body {
   text-align: center !important;
   white-space: nowrap !important;
   box-sizing: border-box !important;
-  border-radius: 0 !important;
+  border-radius: 6px !important;
   box-shadow: none !important;
   transform: none !important;
 }
 
-/* Simple hover effect - just color change */
+/* Simple hover effect with border */
 .greedy-nav .visible-links li a:hover {
-  color: var(--global-masthead-link-color-hover) !important;
-  background: transparent !important;
-  border: none !important;
-  box-shadow: none !important;
-  transform: none !important;
+  color: #9d1a1a !important;
+  background: #c6cbcdda !important;
+  border-color: #999999 !important;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1) !important;
+  transform: translateY(-1px) !important;
 }
 
-/* Active state - simple underline or color change */
+/* Active state with border */
 .greedy-nav .visible-links li a.active {
-  color: var(--global-base-color) !important;
-  background: transparent !important;
-  border: none !important;
-  border-bottom: 2px solid var(--global-base-color) !important;
-  box-shadow: none !important;
+  color: #971919 !important;
+  background: #c6cfca !important;
+  border-color: var(--global-base-color) !important;
+  box-shadow: 0 2px 4px rgba(172, 169, 169) !important;
   transform: none !important;
   position: relative !important;
 }
@@ -124,12 +123,11 @@ body {
 
 /* Active hover - keep the active state */
 .greedy-nav .visible-links li a.active:hover {
-  color: var(--global-base-color) !important;
-  background: transparent !important;
-  border: none !important;
-  border-bottom: 2px solid var(--global-base-color) !important;
-  box-shadow: none !important;
-  transform: none !important;
+  color: #9d1a1a !important;
+  background: #c6cbcdda !important;
+  border-color: var(--global-masthead-link-color-hover) !important;
+  box-shadow: 0 3px 6px rgba(172, 169, 169) !important;
+  transform: translateY(-1px) !important;
 }
 
 /* Clean dropdown styling */
@@ -215,15 +213,23 @@ body {
 
 /* Responsive adjustments */
 @media screen and (max-width: 768px) {
+  .greedy-nav .visible-links {
+    gap: 0.25rem !important;
+  }
+  
   .greedy-nav .visible-links li a {
-    padding: 0.75rem 0.25rem !important;
+    padding: 0.6rem 0.75rem !important;
     font-size: 0.9rem !important;
   }
 }
 
 @media screen and (max-width: 480px) {
+  .greedy-nav .visible-links {
+    gap: 0.15rem !important;
+  }
+  
   .greedy-nav .visible-links li a {
-    padding: 0.5rem 0.15rem !important;
+    padding: 0.5rem 0.5rem !important;
     font-size: 0.8rem !important;
   }
 } 
