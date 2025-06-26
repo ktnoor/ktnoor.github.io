@@ -49,11 +49,35 @@ body {
           box-shadow: 0 4px 8px rgba(0,0,0,0.15);
         }
         
-        /* Active state */
+        /* Active state - enhanced styling */
         &.active {
-          background: var(--global-base-color);
-          color: #fff;
-          border-color: var(--global-base-color);
+          background: var(--global-base-color) !important;
+          color: #fff !important;
+          border-color: var(--global-base-color) !important;
+          transform: translateY(-1px);
+          box-shadow: 0 3px 6px rgba(0,0,0,0.2);
+          position: relative;
+          
+          /* Add a subtle glow effect for active state */
+          &::after {
+            content: '';
+            position: absolute;
+            top: -2px;
+            left: -2px;
+            right: -2px;
+            bottom: -2px;
+            background: linear-gradient(45deg, var(--global-base-color), var(--global-masthead-link-color-hover));
+            border-radius: 8px;
+            z-index: -1;
+            opacity: 0.3;
+          }
+          
+          &:hover {
+            background: var(--global-masthead-link-color-hover) !important;
+            border-color: var(--global-masthead-link-color-hover) !important;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.25);
+          }
         }
       }
     }
@@ -72,6 +96,35 @@ body {
           border-color: var(--global-base-color);
           transform: translateY(-2px);
           box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+        }
+        
+        /* Active state for home icon */
+        &.active {
+          background: var(--global-base-color) !important;
+          color: #fff !important;
+          border-color: var(--global-base-color) !important;
+          transform: translateY(-1px);
+          box-shadow: 0 3px 6px rgba(0,0,0,0.2);
+          
+          &::after {
+            content: '';
+            position: absolute;
+            top: -2px;
+            left: -2px;
+            right: -2px;
+            bottom: -2px;
+            background: linear-gradient(45deg, var(--global-base-color), var(--global-masthead-link-color-hover));
+            border-radius: 8px;
+            z-index: -1;
+            opacity: 0.3;
+          }
+          
+          &:hover {
+            background: var(--global-masthead-link-color-hover) !important;
+            border-color: var(--global-masthead-link-color-hover) !important;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.25);
+          }
         }
       }
     }
@@ -95,6 +148,14 @@ body {
         background: var(--global-base-color);
         color: #fff;
         border-color: var(--global-base-color);
+      }
+      
+      /* Active state for hidden links */
+      &.active {
+        background: var(--global-base-color) !important;
+        color: #fff !important;
+        border-color: var(--global-base-color) !important;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.15);
       }
     }
   }

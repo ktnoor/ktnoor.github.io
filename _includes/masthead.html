@@ -6,14 +6,28 @@
       <nav id="site-nav" class="greedy-nav">
         <button><div class="navicon"></div></button>
         <ul class="visible-links">
-          <li class="masthead__menu-item masthead__menu-item--lg"><a href="{{ base_path }}/"><i class="fas fa-home"></i> {{ site.title }}</a></li>
+          {% comment %} Home page active detection {% endcomment %}
+          {% if page.url == "/" or page.url == "/index.html" %}
+            {% assign home_active = "active" %}
+          {% else %}
+            {% assign home_active = "" %}
+          {% endif %}
+          <li class="masthead__menu-item masthead__menu-item--lg"><a href="{{ base_path }}/" class="{{ home_active }}"><i class="fas fa-home"></i> {{ site.title }}</a></li>
           {% for link in site.data.navigation.main %}
             {% if link.url contains 'http' %}
               {% assign domain = '' %}
               {% else %}
               {% assign domain = base_path %}
             {% endif %}
-            <li class="masthead__menu-item"><a href="{{ domain }}{{ link.url }}">{{ link.title }}</a></li>
+            {% comment %} Active page detection for navigation items {% endcomment %}
+            {% assign current_url = page.url %}
+            {% assign link_url = link.url %}
+            {% if current_url == link_url or current_url contains link_url and link_url != "/" %}
+              {% assign nav_active = "active" %}
+            {% else %}
+              {% assign nav_active = "" %}
+            {% endif %}
+            <li class="masthead__menu-item"><a href="{{ domain }}{{ link.url }}" class="{{ nav_active }}">{{ link.title }}</a></li>
           {% endfor %}
         </ul>
         <ul class="hidden-links hidden"></ul>
