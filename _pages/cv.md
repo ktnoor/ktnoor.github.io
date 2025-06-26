@@ -37,7 +37,7 @@ A highly competent researcher with a strong focus on deep learning, specifically
   
 ## Skills and Expertise
 
-**Software and Technical Skills**
+### Software and Technical Skills
 - **Documentation and Office Tools**: Proficient with Microsoft Office (Word, Excel, PowerPoint, Access, Project) and LaTeX for professional documentation and record keeping.
 
 - **Machine and Deep Learning**:
@@ -65,7 +65,7 @@ A highly competent researcher with a strong focus on deep learning, specifically
 
 - **Electronics Simulation, RF and Antenna Design**: Modeled electronic systems with AWR, Proteus, PSpice, and PSim; designed/analysed antennas using CST Studio.
 
-**Professional and Interpersonal Skills:**
+### Professional and Interpersonal Skills
 - **Teamwork and Collaboration**: Collaborated effectively in academic and workplace settings, balancing individual tasks and group dynamics to achieve project objectives.
 
 - **Leadership**: Led multiple academic projects, guiding team members and ensuring successful deliverables for high-profile events.
@@ -77,7 +77,7 @@ A highly competent researcher with a strong focus on deep learning, specifically
 - **Problem Solving and Critical Thinking**: Skilled in diagnosing and resolving complex technical issues, ensuring optimal performance and reliability.
 
 
-**Research and Industry Knowledge**
+### Research and Industry Knowledge
 - **Research Skills**: Proficient in advanced methodologies, experimental design, data analysis, and literature reviews.
 - **Electronics Test Equipment**: Skilled in operating and analysing data from RF spectrum analysers, vector signal analyzers, high-speed oscilloscopes, and RF test sets.
 - **RF Implementation and Regulatory Compliance**: Hands-on experience in designing, testing, and analysing RF modules, including regression testing and certification procedures to meet regional regulatory standards.

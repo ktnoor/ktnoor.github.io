@@ -40,7 +40,7 @@ author_profile: true
 
   .experience-title {
     font-weight: bold;
-    font-size: 1.5em;
+    font-size: 1.2em;
     color: #16354e;
     margin-bottom: 0.3em;
   }

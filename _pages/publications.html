@@ -1,6 +1,5 @@
 ---
 layout: archive
-title: "Publications"
 permalink: /publications/
 author_profile: true
 ---
@@ -51,7 +50,7 @@ author_profile: true
 </style>
   
 <div id="publications-accordion">
-  <!-- <h1>Research Publications</h1> -->
+  <h1>Research Publications</h1>
   {% assign pubs = site.publications | sort: 'date' | reverse %}
   {% assign pubs_by_year = pubs | group_by_exp: 'post', 'post.date | date: "%Y"' %}
   {% assign counter = pubs.size %}
@@ -77,7 +76,7 @@ author_profile: true
 </div>
 
 {% if site.author.googlescholar %}
-  <div class="wordwrap">You can also find my articles on <a href="{{site.author.googlescholar}}">my Google Scholar profile</a>.</div>
+  <div class="wordwrap" style="text-align: right;"><strong>Note:</strong> You can also find my articles on <a href="{{site.author.googlescholar}}">my Google Scholar profile</a>.</div>
 {% endif %}
 
 <script src="{{ '/assets/js/publications.js' | relative_url }}"></script>
