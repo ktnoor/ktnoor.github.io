@@ -29,9 +29,11 @@ A highly competent researcher with a strong focus on deep learning, specifically
 
 ## Research and Publications
 
-  <ul>{% for post in site.publications reversed %}
+  <ol>
+  {% for post in site.publications reversed %}
     {% include archive-single-cv.html %}
-  {% endfor %}</ul>
+  {% endfor %}
+  </ol>
   
 ## Skills and Expertise
 
