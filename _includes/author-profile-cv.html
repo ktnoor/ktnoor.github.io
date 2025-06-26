@@ -4,7 +4,15 @@
   {% assign author = site.data.authors[page.author] %}{% else %}{% assign author = site.author %}
 {% endif %}
 
-<div itemscope itemtype="http://schema.org/Person">
+<div itemscope itemtype="http://schema.org/Person" style="position: relative;">
+
+  <!-- CV Download Link - Top Right Corner -->
+  <div class="cv-download-section" style="position: absolute; top: 0; right: 0; z-index: 10;">
+    <a href="{{ base_path }}/files/KTNoor_CV.pdf" class="btn btn--primary" style="display: inline-flex; align-items: center; gap: 8px; font-size: 1.5em; padding: 10px 15px; background-color: #ff7474; transition: background-color 0.3s ease;" onmouseover="this.style.backgroundColor='#e67e5a'" onmouseout="this.style.backgroundColor='#ff8564'">
+      <i class="fas fa-download" aria-hidden="true"></i>
+      CV in PDF
+    </a>
+  </div>
 
   <div class="author__avatar">
     {% if author.avatar contains "://" %}
