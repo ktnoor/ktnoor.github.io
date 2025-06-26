@@ -20,6 +20,10 @@ author_profile: true
   .publication-title { 
     cursor: pointer; 
     flex: 1;
+    transition: color 0.1s ease;
+  }
+  .publication-title:hover {
+    color: #2685de;
   }
   .publication-details { 
     display: none; 
@@ -46,6 +50,37 @@ author_profile: true
   }
   .publication-content-wrapper {
     flex: 1;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+  }
+  .publication-title-container {
+    flex: 1;
+  }
+  .expand-icon {
+    margin-left: 0.5em;
+    font-size: 1.0em;
+    color: #a9080a;
+    transition: transform 0.2s ease;
+    flex-shrink: 0;
+  }
+  .publication-item.active .expand-icon {
+    transform: rotate(90deg);
+  }
+  @keyframes shake {
+    0% { transform: translateX(0); }
+    20% { transform: translateX(-2px); }
+    40% { transform: translateX(2px); }
+    60% { transform: translateX(-2px); }
+    80% { transform: translateX(2px); }
+    100% { transform: translateX(0); }
+  }
+  .expand-icon svg {
+    /* Only shake on hover of the title container */
+    transition: transform 0.2s;
+  }
+  .publication-title-container:hover .expand-icon svg {
+    animation: shake 0.4s;
   }
 </style>
   
@@ -61,7 +96,14 @@ author_profile: true
       <li class="publication-item" data-index="{{ counter }}">
         <span class="publication-number">{{ counter }}.</span>
         <div class="publication-content-wrapper">
-          <span class="publication-title" onclick="expandPublication(event, {{ counter }})">{% if post.citation %}{{ post.citation }}{% else %}{{ post.title }}{% endif %}</span>
+          <div class="publication-title-container" onclick="expandPublication(event, {{ counter }})">
+            <span class="publication-title">{% if post.citation %}{{ post.citation }}{% else %}{{ post.title }}{% endif %}</span>
+            <span class="expand-icon" aria-label="expand">
+              <svg width="20" height="20" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" style="vertical-align: middle;">
+                <polygon points="8,4 40,20 26,26 36,40 30,44 20,30 14,44 8,4" fill="#a9080a"/>
+              </svg>
+            </span>
+          </div>
           <div class="publication-details" id="pub-details-{{ counter }}">
             {% if post.content %}<div>{{ post.content | markdownify }}</div>{% endif %}
             {% if post.paperurl %}<div><a href="{{ post.paperurl }}" target="_blank">Download Paper</a></div>{% endif %}
