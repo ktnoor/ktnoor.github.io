@@ -4,7 +4,8 @@ collection: experience
 type: "Full-time role"
 permalink: /experience/2021-EMVision
 venue: "EMVision Medical Devices Ltd"
-date: March 2021 - September 2021
+date: March 2021
+end_date: October 2021
 location: "Sydney, New South Wales, Australia"
 ---
 

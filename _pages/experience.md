@@ -83,6 +83,14 @@ author_profile: true
     border-left: 3px solid #3177b1;
     border-radius: 0 4px 4px 0;
     animation: slideDown 0.3s ease-out;
+    clear: both; /* Clear floated elements above */
+    width: 100%;
+    box-sizing: border-box;
+    /* Override parent styles */
+    color: #333; /* Reset text color */
+    text-align: left; /* Reset text alignment */
+    user-select: text; /* Make text selectable */
+    font-size: 1em; /* Reset font size */
   }
 
   @keyframes slideDown {
@@ -110,10 +118,16 @@ author_profile: true
     margin-top: 0.5em;
     transition: all 0.2s ease;
     user-select: none;
+    overflow: hidden; /* Clear floated elements */
   }
   .experience-expand:hover {
     background:rgb(192, 179, 179);
     border-color:rgb(29, 53, 73);
+  }
+  .experience-expand::after {
+    content: "";
+    display: table;
+    clear: both;
   }
   .exp-arrow {
     display: inline-block;
@@ -140,19 +154,18 @@ author_profile: true
   {% for post in experiences %}
     <li class="experience-item" data-index="{{ counter }}">
       <div class="experience-content">
-        <div class="experience-title">{{ post.title }}</div>
+        <div class="experience-title">{{ post.title }} <span style="float:right;font-size:0.9em">{{ post.date | date: "%B %Y" }} {% if post.end_date %}- {{ post.end_date | date: "%B %Y" }}{% endif %}</span></div>
         <div class="experience-venue">{{ post.venue }}</div>
         <div class="experience-location">{{ post.location }}</div>
-        <div class="experience-date">{{ post.date | date: "%B %Y" }} {% if post.end_date %}- {{ post.end_date | date: "%B %Y" }}{% endif %}</div>
         {% if post.content %}
-          <div class="experience-summary">{{ post.content | strip_html | truncate: 120, '...' }}</div>
+          <div class="experience-expand" onclick="expandExperience(event, {{ counter }})">
+            <span class="experience-summary">{{ post.content | strip_html | truncate: 120, '...' }}</span>
+            <span class="expand-text" style="float:right"></span> <span class="exp-arrow" style="float:right">&#x25BC;</span>
+            <div class="experience-details" id="exp-details-{{ counter }}" onclick="event.stopPropagation();">
+              {% if post.content %}<div>{{ post.content | markdownify }}</div>{% endif %}
+            </div>
+          </div>
         {% endif %}
-        <div class="experience-expand" onclick="expandExperience(event, {{ counter }})">
-          <span class="expand-text"></span> <span class="exp-arrow">&#x25BC;</span>
-        </div>
-        <div class="experience-details" id="exp-details-{{ counter }}">
-          {% if post.content %}<div>{{ post.content | markdownify }}</div>{% endif %}
-        </div>
       </div>
     </li>
     {% assign counter = counter | minus: 1 %}

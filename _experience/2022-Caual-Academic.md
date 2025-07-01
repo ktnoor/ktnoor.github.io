@@ -4,7 +4,8 @@ collection: experience
 type: "Undergraduate and postgraduate units"
 permalink: /experience/2022-Casual-Academic
 venue: "School of Information Technology, Deakin University"
-date: September 2022 - November 2024
+date: September 2022
+end_date: Current
 location: "Geelong, Victoria, Australia"
 ---
 
