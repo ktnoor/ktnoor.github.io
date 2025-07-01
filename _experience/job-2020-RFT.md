@@ -1,4 +1,5 @@
 ---
+exp_type: "job"
 title: "Testing Engineer"
 collection: experience
 type: "Full-time role"

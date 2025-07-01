@@ -1,4 +1,5 @@
 ---
+exp_type: "job"
 title: "Firmware Engineer"
 collection: experience
 type: "Full-time role"

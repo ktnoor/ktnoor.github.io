@@ -32,7 +32,9 @@ A highly competent researcher with a strong focus on deep learning, specifically
 
   <ul>
     {% for post in site.experience reversed %}
-      {% include experience-single.html %}
+      {% if post.exp_type == "job" %}
+        {% include experience-single.html %}
+      {% endif %}
     {% endfor %}
   </ul>
 

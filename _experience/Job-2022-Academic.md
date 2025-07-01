@@ -1,4 +1,5 @@
 ---
+exp_type: "job"
 title: "Sessional Academic Staff"
 collection: experience
 type: "Undergraduate and postgraduate units"

@@ -146,9 +146,9 @@ author_profile: true
   }
 </style>
 
-
+# Professional Work Experience
 <div id="experience-accordion">
-  {% assign experiences = site.experience | sort: 'date' | reverse %}
+  {% assign experiences = site.experience | where: "exp_type", "job" | sort: 'date' | reverse %}
   {% assign counter = experiences.size %}
   <ul class="experience-list">
   {% for post in experiences %}
@@ -172,5 +172,65 @@ author_profile: true
   {% endfor %}
   </ul>
 </div>
+
+{% assign project_experiences = site.experience | where: "exp_type", "project" %}
+{% if project_experiences.size > 0 %}
+# Project Experience
+<div id="experience-accordion">
+  {% assign experiences = site.experience | where: "exp_type", "project" | sort: 'date' | reverse %}
+  {% assign counter = experiences.size %}
+  <ul class="experience-list">
+  {% for post in experiences %}
+    <li class="experience-item" data-index="{{ counter }}">
+      <div class="experience-content">
+        <div class="experience-title">{{ post.title }} <span style="float:right;font-size:0.9em">{{ post.date | date: "%B %Y" }} {% if post.end_date %}- {{ post.end_date | date: "%B %Y" }}{% endif %}</span></div>
+        <div class="experience-venue">{{ post.venue }}</div>
+        <div class="experience-location">{{ post.location }}</div>
+        {% if post.content %}
+          <div class="experience-expand" onclick="expandExperience(event, {{ counter }})">
+            <span class="experience-summary">{{ post.content | strip_html | truncate: 120, '...' }}</span>
+            <span class="expand-text" style="float:right"></span> <span class="exp-arrow" style="float:right">&#x25BC;</span>
+            <div class="experience-details" id="exp-details-{{ counter }}" onclick="event.stopPropagation();">
+              {% if post.content %}<div>{{ post.content | markdownify }}</div>{% endif %}
+            </div>
+          </div>
+        {% endif %}
+      </div>
+    </li>
+    {% assign counter = counter | minus: 1 %}
+  {% endfor %}
+  </ul>
+</div>
+{% endif %}
+
+{% assign volunteer_experiences = site.experience | where: "exp_type", "volunteer" %}
+{% if volunteer_experiences.size > 0 %}
+# Volunteer Experience
+<div id="experience-accordion">
+  {% assign experiences = site.experience | where: "exp_type", "volunteer" | sort: 'date' | reverse %}
+  {% assign counter = experiences.size %}
+  <ul class="experience-list">
+  {% for post in experiences %}
+    <li class="experience-item" data-index="{{ counter }}">
+      <div class="experience-content">
+        <div class="experience-title">{{ post.title }} <span style="float:right;font-size:0.9em">{{ post.date | date: "%B %Y" }} {% if post.end_date %}- {{ post.end_date | date: "%B %Y" }}{% endif %}</span></div>
+        <div class="experience-venue">{{ post.venue }}</div>
+        <div class="experience-location">{{ post.location }}</div>
+        {% if post.content %}
+          <div class="experience-expand" onclick="expandExperience(event, {{ counter }})">
+            <span class="experience-summary">{{ post.content | strip_html | truncate: 120, '...' }}</span>
+            <span class="expand-text" style="float:right"></span> <span class="exp-arrow" style="float:right">&#x25BC;</span>
+            <div class="experience-details" id="exp-details-{{ counter }}" onclick="event.stopPropagation();">
+              {% if post.content %}<div>{{ post.content | markdownify }}</div>{% endif %}
+            </div>
+          </div>
+        {% endif %}
+      </div>
+    </li>
+    {% assign counter = counter | minus: 1 %}
+  {% endfor %}
+  </ul>
+</div>
+{% endif %}
 
 <script src="{{ '/assets/js/experience.js' | relative_url }}"></script>
