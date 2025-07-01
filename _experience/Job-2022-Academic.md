@@ -8,6 +8,8 @@ venue: "School of Information Technology, Deakin University"
 date: September 2022
 end_date: Current
 location: "Geelong, Victoria, Australia"
+# description: |
+#   Short description of the role for the CV page.
 ---
 
 I worked as a sessional academic staff member at Deakin University, contributing to the Deep Learning (SIT319, SIT744) and Artificial and Computational Intelligence (SIT215) units. My responsibilities included conducting tutorials and workshops, as well as marking assignments. During the workshops, I:

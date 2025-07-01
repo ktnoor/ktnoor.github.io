@@ -8,6 +8,8 @@ venue: "EMVision Medical Devices Ltd"
 date: March 2021
 end_date: October 2021
 location: "Sydney, New South Wales, Australia"
+# description: |
+#   Short description of the role for the CV page.
 ---
 
 EMVision is an innovative medical device company developing portable electromagnetic microwave imaging solutions. My responsibilities included:

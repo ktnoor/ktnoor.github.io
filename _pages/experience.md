@@ -155,8 +155,7 @@ author_profile: true
     <li class="experience-item" data-index="{{ counter }}">
       <div class="experience-content">
         <div class="experience-title">{{ post.title }} <span style="float:right;font-size:0.9em">{{ post.date | date: "%B %Y" }} {% if post.end_date %}- {{ post.end_date | date: "%B %Y" }}{% endif %}</span></div>
-        <div class="experience-venue">{{ post.venue }}</div>
-        <div class="experience-location">{{ post.location }}</div>
+        <div class="experience-venue">{{ post.venue }}, {{ post.location }}</div>
         {% if post.content %}
           <div class="experience-expand" onclick="expandExperience(event, {{ counter }})">
             <span class="experience-summary">{{ post.content | strip_html | truncate: 120, '...' }}</span>
@@ -184,8 +183,7 @@ author_profile: true
     <li class="experience-item" data-index="{{ counter }}">
       <div class="experience-content">
         <div class="experience-title">{{ post.title }} <span style="float:right;font-size:0.9em">{{ post.date | date: "%B %Y" }} {% if post.end_date %}- {{ post.end_date | date: "%B %Y" }}{% endif %}</span></div>
-        <div class="experience-venue">{{ post.venue }}</div>
-        <div class="experience-location">{{ post.location }}</div>
+        <div class="experience-venue">{{ post.venue }}, {{ post.location }}</div>
         {% if post.content %}
           <div class="experience-expand" onclick="expandExperience(event, {{ counter }})">
             <span class="experience-summary">{{ post.content | strip_html | truncate: 120, '...' }}</span>
@@ -214,8 +212,7 @@ author_profile: true
     <li class="experience-item" data-index="{{ counter }}">
       <div class="experience-content">
         <div class="experience-title">{{ post.title }} <span style="float:right;font-size:0.9em">{{ post.date | date: "%B %Y" }} {% if post.end_date %}- {{ post.end_date | date: "%B %Y" }}{% endif %}</span></div>
-        <div class="experience-venue">{{ post.venue }}</div>
-        <div class="experience-location">{{ post.location }}</div>
+        <div class="experience-venue">{{ post.venue }}, {{ post.location }}</div>
         {% if post.content %}
           <div class="experience-expand" onclick="expandExperience(event, {{ counter }})">
             <span class="experience-summary">{{ post.content | strip_html | truncate: 120, '...' }}</span>

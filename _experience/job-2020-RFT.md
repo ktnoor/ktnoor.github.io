@@ -10,6 +10,8 @@ end_date: December 2020
 location: "Sydney, New South Wales, Australia"
 author_profile: true   # add this line
 # excerpt: "Brief description"
+# description: |
+#   Short description of the role for the CV page.
 ---
 
 RF Technology is a leading Australian manufacturer of wireless communication products. My responsibilities included:
