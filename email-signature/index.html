@@ -1,0 +1,83 @@
+---
+layout: default
+title: "Email Signature Assets Demo"
+---
+
+{% include base_path %}
+
+<div style="font-family: Arial, sans-serif; max-width: 800px; margin: 50px auto; padding: 20px; line-height: 1.6;">
+    <h1>Email Signature Assets Access Demo</h1>
+    
+    <div style="margin: 30px 0; padding: 20px; border: 1px solid #ddd; border-radius: 5px;">
+        <h2>How to Access Files</h2>
+        <p>Files in the <code>email-signature</code> folder can be accessed directly via hyperlinks using the following URL pattern:</p>
+        
+        <div style="background-color: #e8f4fd; padding: 10px; margin: 10px 0; border-left: 4px solid #007acc;">
+            <strong>Jekyll Template:</strong> <code>{% raw %}{{ base_path }}{% endraw %}/email-signature/filename</code><br>
+            <strong>Direct URL:</strong> <code>{{ base_path }}/email-signature/filename</code>
+        </div>
+    </div>
+
+    <div style="margin: 30px 0; padding: 20px; border: 1px solid #ddd; border-radius: 5px;">
+        <h2>Available Assets</h2>
+        <p>All PNG and JPG files in the email-signature folder:</p>
+        
+        {% for image in site.data.email-signature.images %}
+        <div style="margin: 20px 0; padding: 15px; border: 1px solid #eee; border-radius: 5px;">
+            <h3 style="margin-top: 0;">{{ image.name }} <span style="color: #666; font-size: 14px; font-weight: normal;">({{ image.type | upcase }})</span></h3>
+            <p style="color: #666; font-size: 14px; margin: 5px 0;">{{ image.description }}</p>
+            
+            <div style="background-color: #e8f4fd; padding: 10px; margin: 10px 0; border-left: 4px solid #007acc;">
+                <strong>URL:</strong> <code>{{ base_path }}/email-signature/{{ image.filename }}</code>
+            </div>
+           
+            <div style="background-color: #f9f9f9; padding: 10px; border: 1px solid #ddd; text-align: center;">
+                <img src="{{ base_path }}/email-signature/{{ image.filename }}" 
+                     alt="{{ image.name }}" 
+                     style="max-height: 80px; max-width: 200px; border: 1px solid #ccc;">
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+
+    <div style="margin: 30px 0; padding: 20px; border: 1px solid #ddd; border-radius: 5px;">
+        <h2>Sample Email Signature HTML</h2>
+        <p>Here's how you can use these assets in your email signature:</p>
+        
+        <div style="border: 2px solid #007acc; padding: 15px; margin: 15px 0; background-color: #f9f9f9;">
+            <table cellpadding="0" cellspacing="0" border="0">
+                <tr>
+                    <td style="padding-right: 15px;">
+                        <img src="{{ base_path }}/email-signature/ProfilePicture.png" 
+                             alt="Khondaker Tasrif Noor" 
+                             width="80" height="80" 
+                             style="border-radius: 50%;">
+                    </td>
+                    <td style="vertical-align: top;">
+                        <strong>Khondaker Tasrif Noor</strong><br>
+                        Researcher | Machine Learning & Computer Vision<br>
+                        <img src="{{ base_path }}/email-signature/deakin-logo.png" 
+                             alt="Deakin University" 
+                             width="80" height="80" 
+                             style="vertical-align: middle;"><br>
+                        Deakin University<br>
+                        <a href="mailto:ktnoor.ai@gmail.com">ktnoor.ai@gmail.com</a>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+    <div style="margin: 30px 0; padding: 20px; border: 1px solid #ddd; border-radius: 5px;">
+        <h2>Adding New Files</h2>
+        <p>To add new email signature assets:</p>
+        <ol>
+            <li>Place your image or document files in the <code>email-signature</code> folder</li>
+            <li>Access them via: <code>{% raw %}{{ base_path }}{% endraw %}/email-signature/your-filename</code></li>
+            <li>Supported formats: JPG, PNG, GIF, SVG, PDF</li>
+        </ol>
+        
+        <p><strong>Example:</strong> If you add <code>deakin.jpg</code> to the folder, it will be accessible at:<br>
+        <code>{{ base_path }}/email-signature/deakin.jpg</code></p>
+    </div>
+</div>

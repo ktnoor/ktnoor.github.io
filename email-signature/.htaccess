@@ -1,0 +1,23 @@
+# Email Signature Assets Configuration
+# Proper MIME types for email signature files
+
+# Image file extensions
+AddType image/jpeg .jpg .jpeg
+AddType image/png .png
+AddType image/gif .gif
+AddType image/svg+xml .svg
+
+# Document types
+AddType application/pdf .pdf
+
+# Cache control for signature assets (1 day)
+<FilesMatch "\.(jpg|jpeg|png|gif|svg|pdf)$">
+    ExpiresActive On
+    ExpiresDefault "access plus 1 day"
+    Header set Cache-Control "public, max-age=86400"
+</FilesMatch>
+
+# Allow CORS for email clients
+<FilesMatch "\.(jpg|jpeg|png|gif|svg|pdf)$">
+    Header set Access-Control-Allow-Origin "*"
+</FilesMatch>

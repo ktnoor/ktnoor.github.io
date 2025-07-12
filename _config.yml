@@ -159,6 +159,7 @@ include:
   - .htaccess
   - _pages
   - files
+  - email-signature
 exclude:
   - "*.sublime-project"
   - "*.sublime-workspace"

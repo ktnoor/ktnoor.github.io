@@ -1,0 +1,44 @@
+---
+# Email Signature Jekyll Template
+# Use this template in your Jekyll pages or layouts
+---
+
+{% include base_path %}
+
+<!-- Email Signature Template for Jekyll -->
+<!-- Place this code in your Jekyll template where you want the email signature -->
+
+<div class="email-signature">
+    <table cellpadding="0" cellspacing="0" border="0" style="font-family: Arial, sans-serif; font-size: 14px;">
+        <tr>
+            <td style="padding-right: 15px;">
+                <img src="{{ base_path }}/email-signature/profile-signature.png" 
+                     alt="Khondaker Tasrif Noor" 
+                     width="60" height="60" 
+                     style="border-radius: 50%; border: 0;">
+            </td>
+            <td style="vertical-align: top;">
+                <strong style="color: #333;">{{ site.author.name | default: "Khondaker Tasrif Noor" }}</strong><br>
+                <span style="color: #666;">Researcher | Machine Learning & Computer Vision</span><br>
+                <img src="{{ base_path }}/email-signature/deakin-logo.png" 
+                     alt="Deakin University" 
+                     height="16" 
+                     style="vertical-align: middle; margin-right: 5px; border: 0;">
+                <span style="color: #666;">{{ site.author.employer | default: "Deakin University" }}</span><br>
+                <a href="mailto:{{ site.author.email }}" style="color: #007acc; text-decoration: none;">{{ site.author.email }}</a>
+            </td>
+        </tr>
+    </table>
+</div>
+
+<!-- 
+Usage Instructions:
+1. Include this file in your Jekyll layouts or pages
+2. The base_path will automatically resolve to your site's URL
+3. Images will load from {{ base_path }}/email-signature/
+4. Site variables like author name and email are pulled from _config.yml
+
+For email clients (non-Jekyll), use the static URLs:
+- Profile: https://ktnoor.github.io/email-signature/profile-signature.png
+- Logo: https://ktnoor.github.io/email-signature/deakin-logo.png
+-->
