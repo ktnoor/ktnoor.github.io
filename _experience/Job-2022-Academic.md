@@ -1,6 +1,6 @@
 ---
 exp_type: "job"
-title: "Sessional Academic Staff"
+title: "Graduate Researcher Teaching Fellow"
 collection: experience
 type: "Undergraduate and postgraduate units"
 permalink: /experience/2022-Casual-Academic
