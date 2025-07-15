@@ -23,6 +23,7 @@ The project encompassed the complete design process from theoretical analysis to
 - Performed circuit simulation and verification using industry-standard tools
 
 **Software and Tools:**
+
 - Electric VLSI Design Software for layout and design
 - LTSpice for circuit simulation and analysis
 

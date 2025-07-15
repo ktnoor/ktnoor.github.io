@@ -24,6 +24,7 @@ The design process required precise biasing of GaAs pHEMT transistor technology 
 - Developed complete package layout with bond wire modeling for 4x4 QFN package PCB implementation
 
 **Software and Tools:**
+
 - AWR Design Environment for RF circuit design and electromagnetic simulation
 
 This project provided comprehensive experience in RF/microwave circuit design, demonstrating proficiency in advanced simulation tools, electromagnetic modeling, and practical considerations for high-frequency circuit implementation and packaging.

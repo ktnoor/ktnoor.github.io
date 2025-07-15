@@ -15,6 +15,7 @@ author_profile: true   # add this line
 ---
 
 RF Technology is a leading Australian manufacturer of wireless communication products. My responsibilities included:
+
 - Programming, testing, and ensuring the quality of digital radios, power amplifiers, and power supplies.
 - Documenting, implementing, and verifying testing processes for all products.
 - Enhancing product quality by refining hardware designs and advancing RF module expertise.

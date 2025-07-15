@@ -13,6 +13,7 @@ location: "Sydney, New South Wales, Australia"
 ---
 
 EMVision is an innovative medical device company developing portable electromagnetic microwave imaging solutions. My responsibilities included:
+
 - Inspecting, developing, and validating device testing plans.
 - Designing a GUI for device testing and automating the test bench analysis process.
 - Documenting product specifications, installation procedures, and testing protocols.

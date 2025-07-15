@@ -25,6 +25,7 @@ Working in a multidisciplinary team environment, the project encompassed complet
 - Successfully demonstrated complete TLC system functionality with comprehensive technical documentation
 
 **Software and Tools:**
+
 - Xilinx ISE for FPGA development and synthesis
 - VHDL for hardware description and system implementation
 

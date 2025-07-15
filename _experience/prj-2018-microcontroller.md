@@ -25,6 +25,7 @@ The project encompassed the development of essential microcontroller components 
 - Demonstrated proficiency in digital system design from concept through FPGA implementation
 
 **Software and Tools:**
+
 - Xilinx ISE for FPGA development and synthesis
 - VHDL for hardware description and system modeling
 

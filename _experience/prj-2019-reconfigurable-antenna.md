@@ -24,6 +24,7 @@ The project required comprehensive understanding of antenna theory, electromagne
 - Validated antenna performance across both frequency bands with consideration for switching mechanism impact
 
 **Software and Tools:**
+
 - CST Studio Suite for electromagnetic simulation and antenna modeling
 
 This project demonstrated expertise in advanced antenna design principles, reconfigurable RF systems, and electromagnetic simulation. The work contributed to understanding of frequency-agile antenna technologies essential for modern multi-band wireless communication systems and software-defined radio applications.

@@ -147,6 +147,7 @@ author_profile: true
 </style>
 
 # Professional Work Experience
+
 <div id="experience-accordion">
   {% assign experiences = site.experience | where: "exp_type", "job" | sort: 'date' | reverse %}
   {% assign counter = experiences.size %}
@@ -174,7 +175,9 @@ author_profile: true
 
 {% assign project_experiences = site.experience | where: "exp_type", "project" %}
 {% if project_experiences.size > 0 %}
+
 # Project Experience
+
 <div id="experience-accordion">
   {% assign experiences = site.experience | where: "exp_type", "project" | sort: 'date' | reverse %}
   {% assign counter = experiences.size %}
@@ -203,7 +206,9 @@ author_profile: true
 
 {% assign volunteer_experiences = site.experience | where: "exp_type", "volunteer" %}
 {% if volunteer_experiences.size > 0 %}
+
 # Volunteer Experience
+
 <div id="experience-accordion">
   {% assign experiences = site.experience | where: "exp_type", "volunteer" | sort: 'date' | reverse %}
   {% assign counter = experiences.size %}

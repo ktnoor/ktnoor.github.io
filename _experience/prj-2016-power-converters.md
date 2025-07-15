@@ -25,6 +25,7 @@ The work involved both theoretical analysis of power converter topologies and pr
 - Demonstrated practical application of power electronics principles in energy efficiency improvement
 
 **Key Technologies:**
+
 - Arduino microcontroller for digital control implementation
 - Passive filter design for harmonic mitigation
 - Pulse Width Modulation (PWM) for power control optimization
