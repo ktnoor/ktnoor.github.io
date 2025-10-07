@@ -179,13 +179,27 @@ author_profile: true
 # Project Experience
 
 <div id="experience-accordion">
-  {% assign experiences = site.experience | where: "exp_type", "project" | sort: 'date' | reverse %}
+  {% comment %} First get current projects sorted by start date (most recent first) {% endcomment %}
+  {% assign current_experiences = site.experience | where: "exp_type", "project" | where: "end_date", "Current" | sort: 'date' | reverse %}
+  
+  {% comment %} Then get non-current projects sorted by end date (most recent first) {% endcomment %}
+  {% assign other_experiences = site.experience | where: "exp_type", "project" %}
+  {% assign non_current_experiences = "" | split: "," %}
+  {% for exp in other_experiences %}
+    {% unless exp.end_date == "Current" %}
+      {% assign non_current_experiences = non_current_experiences | push: exp %}
+    {% endunless %}
+  {% endfor %}
+  {% assign non_current_experiences = non_current_experiences | sort: 'end_date' | reverse %}
+  
+  {% comment %} Combine arrays: current first, then others {% endcomment %}
+  {% assign experiences = current_experiences | concat: non_current_experiences %}
   {% assign counter = experiences.size %}
   <ul class="experience-list">
   {% for post in experiences %}
     <li class="experience-item" data-index="{{ counter }}">
       <div class="experience-content">
-        <div class="experience-title">{{ post.title }} <span style="float:right;font-size:0.9em">{{ post.date | date: "%B %Y" }} {% if post.end_date %}- {{ post.end_date | date: "%B %Y" }}{% endif %}</span></div>
+        <div class="experience-title">{{ post.title }} <span style="float:right;font-size:0.9em">{{ post.date | date: "%B %Y" }} {% if post.end_date %}{% if post.end_date == "Current" %}- {{ post.end_date }}{% else %}- {{ post.end_date | date: "%B %Y" }}{% endif %}{% endif %}</span></div>
         <div class="experience-venue">{{ post.venue }}, {{ post.location }}</div>
         {% if post.content %}
           <div class="experience-expand" onclick="expandExperience(event, {{ counter }})">
