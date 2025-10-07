@@ -104,22 +104,87 @@ layout: default
   .social-icon {
     width: 24px;
     height: 24px;
-    color: #16354e;
     text-decoration: none;
     transition: color 0.3s ease;
   }
   
-  .social-icon:hover {
-    color: #3498db;
+  /* Brand-specific colors for social icons */
+  .social-icon[title="Email"] {
+    color: #D44638; /* Gmail red */
   }
   
-  /* Normalize Academic Icons spacing to match FontAwesome */
+  .social-icon[title="LinkedIn"] {
+    color: #0077B5; /* LinkedIn blue */
+  }
+  
+  .social-icon[title="ResearchGate"] {
+    color: #00CCBB; /* ResearchGate teal */
+  }
+  
+  .social-icon[title="GitHub"] {
+    color: #333333; /* GitHub dark gray */
+  }
+  
+  .social-icon[title="ORCID"] {
+    color: #A6CE39; /* ORCID green */
+  }
+  
+  .social-icon[title="Google Scholar"] {
+    color: #4285F4; /* Google blue */
+  }
+  
+  /* Hover effects with slightly darker/lighter versions */
+  .social-icon[title="Email"]:hover {
+    color: #B23121;
+  }
+  
+  .social-icon[title="LinkedIn"]:hover {
+    color: #005885;
+  }
+  
+  .social-icon[title="ResearchGate"]:hover {
+    color: #00A896;
+  }
+  
+  .social-icon[title="GitHub"]:hover {
+    color: #24292e;
+  }
+  
+  .social-icon[title="ORCID"]:hover {
+    color: #8FB830;
+  }
+  
+  .social-icon[title="Google Scholar"]:hover {
+    color: #3367D6;
+  }
+  
+  /* Normalize Academic Icons to match FontAwesome fa-2x size */
   .social-icon .ai {
-    margin-right: 0 !important;
-    padding-right: 0 !important;
-    width: 24px !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    width: auto !important;
     text-align: center !important;
     display: inline-block !important;
+    font-size: 2em !important; /* Match fa-2x size */
+    line-height: 1 !important;
+    vertical-align: middle !important;
+  }
+  
+  /* Ensure all icons have consistent spacing */
+  .social-icon i {
+    display: inline-block;
+    text-align: center;
+    vertical-align: middle;
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Fix any potential spacing issues with FontAwesome icons */
+  .social-icon .fas,
+  .social-icon .fab {
+    margin: 0 !important;
+    padding: 0 !important;
+    vertical-align: middle !important;
   }
   
   .organization-logo {
@@ -233,6 +298,11 @@ layout: default
             <a href="https://www.linkedin.com/in/{{ author.linkedin }}" target="_blank" class="social-icon" title="LinkedIn">
               <i class="fab fa-linkedin fa-2x"></i>
             </a>
+          {% endif %}
+          {% if author.researchgate %}
+          <a href="{{ author.researchgate }}" target="_blank" class="social-icon" title="ResearchGate">
+            <i class="ai ai-researchgate-square ai-2x"></i>
+          </a>
           {% endif %}
           {% if author.github %}
             <a href="https://github.com/{{ author.github }}" target="_blank" class="social-icon" title="GitHub">
