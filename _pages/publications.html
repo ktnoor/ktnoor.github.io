@@ -14,12 +14,10 @@ author_profile: true
   }
   .publication-item { 
     margin-bottom: 0.5em; 
-    display: flex;
-    align-items: flex-start;
+    display: block; /* Changed from flex to block for vertical stacking */
   }
   .publication-title { 
     cursor: pointer; 
-    flex: 1;
     transition: color 0.01s ease;
   }
   .publication-title:hover {
@@ -27,9 +25,9 @@ author_profile: true
   }
   .publication-details { 
     display: none; 
-    margin-top: 0.2em; 
+    margin-top: 0.5em; 
     margin-bottom: 0.5em; 
-    padding-left: 1.5em; 
+    padding: 1em 1.5em; 
     background: #f7f7f7; 
     border-left: 3px solid #3177b1; 
     border-radius: 0 4px 4px 0; 
@@ -49,13 +47,14 @@ author_profile: true
     flex-shrink: 0; /* Prevents the number from shrinking */
   }
   .publication-content-wrapper {
-    flex: 1;
     display: flex;
     align-items: flex-start;
     justify-content: space-between;
   }
   .publication-title-container {
     flex: 1;
+    display: flex;
+    align-items: center;
   }
   .expand-icon {
     margin-left: 0.5em;
@@ -65,7 +64,7 @@ author_profile: true
     flex-shrink: 0;
   }
   .publication-item.active .expand-icon {
-    transform: rotate(90deg);
+    transform: rotate(180deg);
   }
   @keyframes shake {
     0% { transform: translateX(0); }
@@ -94,22 +93,22 @@ author_profile: true
     <ol class="publication-list">
     {% for post in year_group.items %}
       <li class="publication-item" data-index="{{ counter }}">
-        <span class="publication-number">{{ counter }}.</span>
         <div class="publication-content-wrapper">
+          <span class="publication-number">{{ counter }}.</span>
           <div class="publication-title-container" onclick="expandPublication(event, this.closest('.publication-item').getAttribute('data-index'))">
             <span class="publication-title">{% if post.citation %}{{ post.citation }}{% else %}{{ post.title }}{% endif %}</span>
             <span class="expand-icon" aria-label="expand">
-              <svg width="20" height="20" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" style="vertical-align: middle;">
-                <polygon points="8,4 40,20 26,26 36,40 30,44 20,30 14,44 8,4" fill="#a9080a"/>
+              <svg width="40" height="40" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style="vertical-align: middle;">
+                <path d="M7 10L12 15L17 10H7Z" fill="#a9080a"/>
               </svg>
             </span>
           </div>
-          <div class="publication-details" id="pub-details-{{ counter }}">
-            {% if post.content %}<div>{{ post.content | markdownify }}</div>{% endif %}
-            {% if post.paperurl %}<div><a href="{{ post.paperurl }}" target="_blank">Download Paper</a></div>{% endif %}
-            {% if post.slidesurl %}<div><a href="{{ post.slidesurl }}" target="_blank">Download Slides</a></div>{% endif %}
-            {% if post.doiurl %}<div><a href="{{ post.doiurl }}" target="_blank">DOI</a></div>{% endif %}
-          </div>
+        </div>
+        <div class="publication-details" id="pub-details-{{ counter }}">
+          {% if post.content %}<div>{{ post.content | markdownify }}</div>{% endif %}
+          {% if post.paperurl %}<div><a href="{{ post.paperurl }}" target="_blank">Download Paper</a></div>{% endif %}
+          {% if post.slidesurl %}<div><a href="{{ post.slidesurl }}" target="_blank">Download Slides</a></div>{% endif %}
+          {% if post.doiurl %}<div><a href="{{ post.doiurl }}" target="_blank">DOI</a></div>{% endif %}
         </div>
       </li>
       {% assign counter = counter | minus: 1 %}
