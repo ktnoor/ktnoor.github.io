@@ -1,3 +1,113 @@
 {
-    "ltex.language": "en-GB"
+    "ltex.language": "en-GB",
+    "explorer.autoReveal": true,
+    "explorer.autoRevealExclude": {
+        "**/LaTex-Build": true,
+        "**/.vscode": true
+    },
+    "todo-tree.general.tagGroups": {},
+    "todo-tree.general.tags": [
+        "BUG",
+        "HACK",
+        "FIXME",
+        "TODO",
+        "XXX",
+        "[ ]",
+        "[x]",
+        "ADD",
+        "INCLUDE",
+        "FIX",
+        "DISCUSS",
+        "CHECK"
+    ],
+
+    "todo-tree.regex.regex": "(//|#|<!--|;|/\\*|^|^[ \\t]*(-|\\d+.)|%)\\s*($TAGS)",
+    "todo-tree.highlights.customHighlight": {
+
+        "BUG": {
+            "icon": "bug",
+            "type": "line",
+            "foreground": "#FFFFFF",
+            "background": "#FFA500",
+            "opacity": 50,
+            "iconColour": "#FFA500"
+        },
+        "HACK": {
+            "icon": "tools",
+            "type": "line",
+            "foreground": "#FFFFFF",
+            "background": "#FFA500",
+            "opacity": 50,
+            "iconColour": "#FFA500"
+        },
+        "FIXME": {
+            "icon": "flame",
+            "type": "line",
+            "foreground": "#FFFFFF",
+            "background": "#FFA500",
+            "opacity": 50,
+            "iconColour": "#FFA500"
+        },
+        "XXX": {
+            "icon": "x"
+        },
+        "[ ]": {
+            "icon": "issue-draft"
+        },
+        "[x]": {
+            "icon": "issue-closed"
+        },
+        "ADD": {
+            "icon": "tools",
+            "type": "line",
+            "foreground": "#FFFFFF",
+            "background": "#FFA500",
+            "opacity": 50,
+            "iconColour": "#FFA500"
+        },
+        "INCLUDE": {
+            "icon": "tools",
+            "type": "line",
+            "foreground": "#FFFFFF",
+            "background": "#FFA500",
+            "opacity": 50,
+            "iconColour": "#FFA500"
+        },
+        "FIX": {
+            "icon": "tools",
+            "type": "line",
+            "foreground": "#FFFFFF",
+            "background": "#FFA500",
+            "opacity": 50,
+            "iconColour": "#FFA500"
+        },
+        "DISCUSS": {
+            "icon": "question",
+            "type": "line",
+            "foreground": "#FFFFFF",
+            "background": "#FFA500",
+            "opacity": 50,
+            "iconColour": "#FFA500"
+        },
+        "CHECK": {
+            "icon": "question",
+            "type": "line",
+            "foreground": "#FFFFFF",
+            "background": "#FFA500",
+            "opacity": 50,
+            "iconColour": "#FFA500"
+        },
+        "TODO": {
+            "icon": "check",
+            "type": "line",
+            "foreground": "#FFFFFF",
+            "background": "#FFA500",
+            "opacity": 50,
+            "iconColour": "#FFA500"
+        }
+    },
+    "markdown-preview-enhanced.usePandocParser": true,
+    "markdown-preview-enhanced.pandocArguments": [
+        "--mathjax"
+    ]
 }
