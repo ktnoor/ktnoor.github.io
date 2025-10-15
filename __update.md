@@ -44,6 +44,35 @@ This will contain the assets used in the email signature, such as images and log
     > 1. Include the assets (images, logos, etc.) in the [email-signature](email-signature/) directory. Generally in `PNG` or `JPG` format.
     > Update the [_data\email-signature.yml](_data/email-signature.yml) file with the new content using the [update-email-signature-data.sh](./update-email-signature-data.sh) script. Just run the following command in the terminal:
 
-    ```bash
+     ```bash
      ./update-email-signature-data.sh
     ```
+
+## Create a new page
+
+To create a new page on the website, follow these steps:
+
+1. **Create a new file:** Create a new markdown file (e.g., `new-page.md`) inside the `_pages/` directory.
+
+2. **Add Front Matter:** At the beginning of the file, add the following front matter block. This is used to set page-specific variables.
+
+   ```yaml
+   ---
+   layout: single
+   title: "Your New Page Title"
+   permalink: /your-new-page-url/
+   ---
+   ```
+
+   * `layout`: Defines the page layout. `single` is a good default. Other layouts can be found in the `_layouts/` directory.
+   * `title`: The title of your page.
+   * `permalink`: The URL for your new page (e.g., `https://ktnoor.github.io/your-new-page-url/`).
+
+3. **Add Content:** Below the front matter, write the content for your page using Markdown.
+
+4. **Add to Navigation (Optional):** If you want to add a link to your new page in the main navigation bar, you need to edit the `_data/navigation.yml` file. Add a new entry like this:
+
+   ```yaml
+   - title: "Your New Page Title"
+     url: /your-new-page-url/
+   ```
