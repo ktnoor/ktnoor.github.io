@@ -90,30 +90,45 @@ A highly competent researcher with a strong focus on deep learning, specifically
   In addition to my academic qualifications, I have completed several certifications that enhance my expertise in various domains:
   <ul style="list-style-type: none; padding-left: 6px;">
     <li><i class="fas fa-award" style="color: #184d1aff; margin-right: 8px;"></i>
-      Battery Management Systems (2024).
+      <a href="https://coursera.org/share/a1076c994a96461d4713d99d6eeb80f0">Mathematics for Machine Learning (2025)</a>
     </li>
     <li><i class="fas fa-award" style="color: #184d1aff; margin-right: 8px;"></i>
-      Professional Engineer (Engineers Australia, 2023).
+      <a href="https://coursera.org/share/747b87e829e15f8f66269c97c788ace1">Algorithms for Battery Management Systems (2024)</a>
     </li>
     <li><i class="fas fa-award" style="color: #184d1aff; margin-right: 8px;"></i>
-      TensorFlow Developer (DeepLearning.AI, 2022).
+      <a href="https://portal.engineersaustralia.org.au/estage1/search?last_name=Noor&ea_id=8439763&app_id=317589">Professional Engineer (Engineers Australia, 2023)</a>
     </li>
     <li><i class="fas fa-award" style="color: #184d1aff; margin-right: 8px;"></i>
-      IT Automation with Python (Google, 2022).
+      <a href="https://coursera.org/share/09725f762580246cf0e14fca3ff2ac90">TensorFlow Developer (DeepLearning.AI, 2022)</a>
     </li>
     <li><i class="fas fa-award" style="color: #184d1aff; margin-right: 8px;"></i>
-      AI Engineering (IBM, 2021).
+      <a href="https://coursera.org/share/615c9c5fe7a0e954b10e33f01729770a">IT Automation with Python (Google, 2022)</a>
     </li>
     <li><i class="fas fa-award" style="color: #184d1aff; margin-right: 8px;"></i>
-      Digital Systems (UAB, 2021).
+      <a href="https://www.credly.com/badges/7af5d246-c723-4541-b93d-6d9fd4a1c8d8/public_url">AI Engineering (IBM, 2021)</a>
     </li>
     <li><i class="fas fa-award" style="color: #184d1aff; margin-right: 8px;"></i>
-      Specialisation in Programming the IOT (UCI, 2020).
+      <a href="https://coursera.org/share/a931a5565f0a36c5c6576cae8b1c180e">Digital Systems (UAB, 2021)</a>
     </li>
     <li><i class="fas fa-award" style="color: #184d1aff; margin-right: 8px;"></i>
-      PCB Designing (Udemy, 2020).
+      <a href="https://coursera.org/share/c69baf09a6b1641ccd0158e7a9f9d5db">Specialisation in Programming the Internet of Things (UCI, 2020)</a>
+    </li>
+    <li><i class="fas fa-award" style="color: #184d1aff; margin-right: 8px;"></i>
+      <a href="https://www.udemy.com/certificate/UC-3QFUMLLF/">PCB Designing (Udemy, 2020)</a>
     </li>
   </ul>
+
+- **Professional Badges**: <br>
+<!--  -->
+ I have earned several professional badges that demonstrate my skills and expertise in various areas. Notable badges include:
+<div style="text-align: center; margin-top: 15px;">
+  <a href="https://www.credly.com/badges/2e94fd2d-9140-471c-ae39-8223e706d50c/public_url" target="_blank"><img src="{{ base_path }}/_pages/image/cv/Machine Learning with Python.png" alt="Machine Learning with Python" style="width: 120px; height: 120px; margin-left: 15px; margin-right: 15px;"></a>
+  <a href="https://www.credly.com/badges/0badd520-f66e-44bf-bb06-c27ff9b90ef3/public_url" target="_blank"><img src="{{ base_path }}/_pages/image/cv/Deep Learning Essentials with Keras.png" alt="Deep Learning Essentials with Keras" style="width: 120px; height: 120px; margin-left: 15px; margin-right: 15px;"></a>
+  <a href="https://www.credly.com/badges/e5001d66-9bb7-4fc4-ac48-009b507a024c/public_url" target="_blank"><img src="{{ base_path }}/_pages/image/cv/Deep Learning with Tensorflow.png" alt="Deep Learning with Tensorflow" style="width: 120px; height: 120px; margin-left: 15px; margin-right: 15px;"></a>
+  <a href="https://www.credly.com/badges/96e61788-f3d6-4959-91b2-9445a97f8d0d/public_url" target="_blank"><img src="{{ base_path }}/_pages/image/cv/Deep Neural Networks with PyTorch.png" alt="Deep Neural Networks with PyTorch" style="width: 120px; height: 120px; margin-left: 15px; margin-right: 15px;"></a>
+  <a href="https://www.credly.com/badges/cff429f1-ff41-4aad-bc4d-277610a794ce/public_url" target="_blank"><img src="{{ base_path }}/_pages/image/cv/Computer Vision and Image Processing Essentials.png" alt="Computer Vision and Image Processing Essentials" style="width: 120px; height: 120px; margin-left: 15px; margin-right: 15px;"></a>
+  <a href="https://www.credly.com/badges/7af5d246-c723-4541-b93d-6d9fd4a1c8d8/public_url" target="_blank"><img src="{{ base_path }}/_pages/image/cv/IBM AI Engineering Professional Certificate (V2).png" alt="IBM AI Engineering Professional Certificate" style="width: 120px; height: 120px; margin-left: 15px; margin-right: 15px;"></a>
+</div>
 
 - **Peer Reviewer:** <br>
 I have reviewed papers for conferences such as `KSEM`, `AICCSA`, `ECAI`, `PAKDD` and journals such as `Pattern Recognition`, `Information fusion`, `Neurocomputing`, `Neural computing and applications`, and `MethodsX`. The updated list of my peer reviews can be found [here](https://orcid.org/0000-0002-4259-9539#:~:text=Peer%20review%20(16%20reviews%C2%A0for%207%20publications/grants)).
@@ -121,6 +136,6 @@ I have reviewed papers for conferences such as `KSEM`, `AICCSA`, `ECAI`, `PAKDD`
 ## References
 
 - [**Dr. Wei Luo**, <br>Associate Professor, School of Information Technology, Deakin University, Australia](https://experts.deakin.edu.au/7851-wei-luo)
-- [**Prof. Antonio Robles-Kelly**, <br>Professor, School of Information Technology, Deakin University, Australia](https://experts.deakin.edu.au/45485-antonio-robleskelly)
+- [**Prof. Antonio Robles-Kelly**, <br>Adjunct Professor, School of Information Technology, University of Adelaide, Australia](https://www.linkedin.com/in/antonio-robles-kelly-19481835/)
 - [**Dr. Mohamed R. Bouadjenek**, <br>Senior Lecturer, School of Information Technology, Deakin University, Australia](https://experts.deakin.edu.au/51849-mohamed-reda-bouadjenek)
 - [**Dr. Leo Zhang**, <br>Senior Lecturer, School of Information and Communication Technology,Griffith University, Australia](https://experts.griffith.edu.au/41503-leo-zhang)
