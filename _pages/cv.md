@@ -113,31 +113,31 @@ Completed the Higher Secondary Certificate (HSC) under the Science discipline, s
   In addition to my academic qualifications, I have completed several certifications that enhance my expertise in various domains:
   <ul style="list-style-type: none; padding-left: 6px;">
     <li><i class="fas fa-award" style="color: #184d1aff; margin-right: 8px;"></i>
-      <a href="https://coursera.org/share/a1076c994a96461d4713d99d6eeb80f0">Mathematics for Machine Learning (2025)</a>
+      <a href="https://coursera.org/share/a1076c994a96461d4713d99d6eeb80f0" target="_blank">Mathematics for Machine Learning (2025)</a>
     </li>
     <li><i class="fas fa-award" style="color: #184d1aff; margin-right: 8px;"></i>
-      <a href="https://coursera.org/share/747b87e829e15f8f66269c97c788ace1">Algorithms for Battery Management Systems (2024)</a>
+      <a href="https://coursera.org/share/747b87e829e15f8f66269c97c788ace1" target="_blank">Algorithms for Battery Management Systems (2024)</a>
     </li>
     <li><i class="fas fa-award" style="color: #184d1aff; margin-right: 8px;"></i>
-      <a href="https://portal.engineersaustralia.org.au/estage1/search?last_name=Noor&ea_id=8439763&app_id=317589">Professional Engineer (Engineers Australia, 2023)</a>
+      <a href="https://portal.engineersaustralia.org.au/estage1/search?last_name=Noor&ea_id=8439763&app_id=317589" target="_blank">Professional Engineer (Engineers Australia, 2023)</a>
     </li>
     <li><i class="fas fa-award" style="color: #184d1aff; margin-right: 8px;"></i>
-      <a href="https://coursera.org/share/09725f762580246cf0e14fca3ff2ac90">TensorFlow Developer (DeepLearning.AI, 2022)</a>
+      <a href="https://coursera.org/share/09725f762580246cf0e14fca3ff2ac90" target="_blank">TensorFlow Developer (DeepLearning.AI, 2022)</a>
     </li>
     <li><i class="fas fa-award" style="color: #184d1aff; margin-right: 8px;"></i>
-      <a href="https://coursera.org/share/615c9c5fe7a0e954b10e33f01729770a">IT Automation with Python (Google, 2022)</a>
+      <a href="https://coursera.org/share/615c9c5fe7a0e954b10e33f01729770a" target="_blank">IT Automation with Python (Google, 2022)</a>
     </li>
     <li><i class="fas fa-award" style="color: #184d1aff; margin-right: 8px;"></i>
-      <a href="https://www.credly.com/badges/7af5d246-c723-4541-b93d-6d9fd4a1c8d8/public_url">AI Engineering (IBM, 2021)</a>
+      <a href="https://www.credly.com/badges/7af5d246-c723-4541-b93d-6d9fd4a1c8d8/public_url" target="_blank">AI Engineering (IBM, 2021)</a>
     </li>
     <li><i class="fas fa-award" style="color: #184d1aff; margin-right: 8px;"></i>
-      <a href="https://coursera.org/share/a931a5565f0a36c5c6576cae8b1c180e">Digital Systems (UAB, 2021)</a>
+      <a href="https://coursera.org/share/a931a5565f0a36c5c6576cae8b1c180e" target="_blank">Digital Systems (UAB, 2021)</a>
     </li>
     <li><i class="fas fa-award" style="color: #184d1aff; margin-right: 8px;"></i>
-      <a href="https://coursera.org/share/c69baf09a6b1641ccd0158e7a9f9d5db">Specialisation in Programming the Internet of Things (UCI, 2020)</a>
+      <a href="https://coursera.org/share/c69baf09a6b1641ccd0158e7a9f9d5db" target="_blank">Specialisation in Programming the Internet of Things (UCI, 2020)</a>
     </li>
     <li><i class="fas fa-award" style="color: #184d1aff; margin-right: 8px;"></i>
-      <a href="https://www.udemy.com/certificate/UC-3QFUMLLF/">PCB Designing (Udemy, 2020)</a>
+      <a href="https://www.udemy.com/certificate/UC-3QFUMLLF/" target="_blank">PCB Designing (Udemy, 2020)</a>
     </li>
   </ul>
 
