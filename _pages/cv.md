@@ -18,7 +18,7 @@ A highly competent researcher with a strong focus on deep learning, specifically
 <div style="display: flex; align-items: flex-start; margin-top: 20px; margin-bottom: 15px;">
   <img src="{{ base_path }}/images/deakin-logo.png" alt="Deakin University" style="width: 50px; height: 50px; margin-right: 15px; flex-shrink: 0;">
   <div style="flex-grow: 1;">
-    <div><strong>Ph.D in Computer Vision</strong> <span style="float:right;">2025 (expected)</span></div>
+    <div><strong>Ph.D in Computer Vision</strong> <span style="float:right;">October 2025</span></div>
     <div><em>Deakin University, Victoria, Australia</em></div>
   </div>
 </div>
