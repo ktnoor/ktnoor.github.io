@@ -6,8 +6,8 @@ permalink: /publication/2024-ht-Capsnet
 excerpt: 'This paper is about the consistency-aware hierarchical multi-label image classification using a deep capsule network.'
 date: 2025-11-04
 venue: 'Knowledge-Based Systems'
-# slidesurl: 'http://ktnoor.github.io/files/slides1.pdf'
-paperurl: 'http://ktnoor.github.io/files/ht-capsnet.pdf'
+# slidesurl: 'http://ktnoor.github.io/files/papers/slides1.pdf'
+paperurl: 'http://ktnoor.github.io/files/papers/ht-capsnet.pdf'
 doiurl: 'https://doi.org/10.1016/j.knosys.2025.114444'
 citation: '<i>K. T. Noor, W. Luo, A. Robles-Kelly, L. Y. Zhang, and M. R. Bouadjenek, “Taxonomy-guided routing in capsule network for hierarchical image classification,” Knowledge-Based Systems, vol. 329, p. 114444, Nov. 2025, doi: 10.1016/j.knosys.2025.114444.</i>'
 ---
