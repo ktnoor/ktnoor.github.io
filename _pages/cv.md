@@ -22,7 +22,7 @@ A highly competent researcher with a strong focus on deep learning, specifically
     <div><em>Deakin University, Victoria, Australia</em></div>
   </div>
 </div>
-Completed a Doctor of Philosophy in Information Technology with specialised research in deep learning methodologies for image classification. Awarded the Deakin University Postgraduate Research Scholarship (DUPR) in recognition of academic excellence. Contributed to the advancement of the field through multiple peer-reviewed publications in internationally recognized conferences and journals. My research focused on developing novel neural network architectures and training algorithms to enhance the performance and efficiency of deep learning models in computer vision applications.
+Earned a Doctor of Philosophy in Information Technology with a research focus on deep learning methodologies for image classification. Awarded the Deakin University Postgraduate Research Scholarship (DUPR) in recognition of academic excellence. Contributed to the advancement of the field through multiple peer-reviewed publications in internationally recognised conferences and journals. My research focused on developing novel neural network architectures and training algorithms to enhance the performance and efficiency of deep learning models in computer vision applications.
 
 <div style="display: flex; align-items: flex-start; margin-bottom: 15px;">
   <img src="{{ base_path }}/images/macquarie-logo.png" alt="Macquarie University" style="width: 50px; height: 50px; margin-right: 15px; flex-shrink: 0;">
@@ -31,7 +31,7 @@ Completed a Doctor of Philosophy in Information Technology with specialised rese
     <div><em>Macquarie University, Sydney, Australia</em></div>
   </div>
 </div>
-Achieved Vice-Chancellor's International Scholarship and completed a Master of Engineering degree with a specialisation in Electronics Engineering. Gained in-depth knowledge in the areas of analogue and digital electronics. Adapted technical and practical skills for electronic systems and circuit design by completing electronic projects as a part of coursework.
+Attained a Master of Engineering with a specialisation in Electronics Engineering, earning the Vice-Chancellor’s International Scholarship for outstanding academic performance. Developed comprehensive expertise in analogue and digital electronics, circuit theory, and electronic system design. Strengthened technical proficiency through extensive project-based coursework, involving the design, simulation, and testing of advanced electronic systems and embedded devices. The degree fostered a solid integration of theoretical principles with practical engineering applications.
 
 <div style="display: flex; align-items: flex-start; margin-bottom: 15px;">
   <img src="{{ base_path }}/images/BRACU-logo.png" alt="BRAC University" style="width: 50px; height: 50px; margin-right: 15px; flex-shrink: 0;">
@@ -40,16 +40,16 @@ Achieved Vice-Chancellor's International Scholarship and completed a Master of E
     <div><em>BRAC University, Dhaka, Bangladesh</em></div>
   </div>
 </div>
-Completed a Bachelor of Science degree in Electrical and Electronics Engineering with a specialisation in Electronics engineering. During my undergraduate studies, I gained a strong foundation in the principles of electrical and electronics engineering, including circuit theory, digital electronics, and signal processing. I also completed a series of projects in the field of digital electronics and embedded systems which helped me to develop a strong foundation in programming and hardware prototyping.
+Awarded a Bachelor of Science in Electrical and Electronics Engineering with a specialisation in Electronics Engineering. Acquired a rigorous grounding in circuit analysis, signal processing, and digital system design. Engaged in several applied research and development projects focused on embedded systems and digital electronics, which cultivated strong analytical, programming, and hardware prototyping skills. This foundational training established a long-term academic and professional interest in intelligent electronic systems and computational technologies.
 
-<div style="display: flex; align-items: flex-start; margin-top: 20px; margin-bottom: 15px;">
+<!-- <div style="display: flex; align-items: flex-start; margin-top: 20px; margin-bottom: 15px;">
   <img src="{{ base_path }}/images/RUMC-logo.png" alt="Rajuk Uttara Model College" style="width: 50px; height: 50px; margin-right: 15px; flex-shrink: 0;">
   <div style="flex-grow: 1;">
     <div><strong>Higher Secondary Certificate (HSC)</strong> <span style="float:right;">December 2011</span></div>
     <div><em>Rajuk Uttara Model College, Dhaka, Bangladesh</em></div>
   </div>
 </div>
-Completed the Higher Secondary Certificate (HSC) under the Science discipline, securing a GPA of 5.00 out of 5.00. Demonstrated exceptional academic performance in core subjects, particularly in Mathematics and Physics, which fostered strong analytical and problem-solving abilities. This academic achievement established a solid foundation for pursuing advanced studies and research in the fields of engineering and technology.
+Completed the Higher Secondary Certificate (HSC) under the Science discipline, securing a GPA of 5.00 out of 5.00. Demonstrated exceptional academic performance in core subjects, particularly in Mathematics and Physics, which fostered strong analytical and problem-solving abilities. This academic achievement established a solid foundation for pursuing advanced studies and research in the fields of engineering and technology. -->
 
 ## Work experience
 
