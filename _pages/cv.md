@@ -22,7 +22,7 @@ A highly competent researcher with a strong focus on deep learning, specifically
     <div><em>Deakin University, Victoria, Australia</em></div>
   </div>
 </div>
-Pursuing a PhD in Information Technology with a research focus on developing deep learning models for image classification. Recipient of the prestigious Deakin University Postgraduate Research Scholarship (DUPR). Published multiple research papers in top-tier conferences and journals. Anticipated completion date: July 2025.
+Completed a Doctor of Philosophy in Information Technology with specialised research in deep learning methodologies for image classification. Awarded the Deakin University Postgraduate Research Scholarship (DUPR) in recognition of academic excellence. Contributed to the advancement of the field through multiple peer-reviewed publications in internationally recognized conferences and journals. My research focused on developing novel neural network architectures and training algorithms to enhance the performance and efficiency of deep learning models in computer vision applications.
 
 <div style="display: flex; align-items: flex-start; margin-bottom: 15px;">
   <img src="{{ base_path }}/images/macquarie-logo.png" alt="Macquarie University" style="width: 50px; height: 50px; margin-right: 15px; flex-shrink: 0;">
