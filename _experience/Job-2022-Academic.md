@@ -6,7 +6,7 @@ type: "Undergraduate and postgraduate units"
 permalink: /experience/2022-Casual-Academic
 venue: "School of Information Technology, Deakin University"
 date: September 2022
-end_date: Current
+end_date: December 2025
 location: "Geelong, Victoria, Australia"
 # description: |
 #   Short description of the role for the CV page.
