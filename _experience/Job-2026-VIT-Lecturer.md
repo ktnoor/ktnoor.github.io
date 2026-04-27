@@ -7,7 +7,7 @@ permalink: /experience/2026-VIT-Lecturer
 venue: "Victorian Institute of Technology (VIT)"
 date: March 2026
 end_date: Current
-location: "Melbourne, Victoria, Australia"
+location: "Geelong, Victoria, Australia"
 # description: |
 #   Short description of the role for the CV page.
 ---
